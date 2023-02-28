@@ -2,6 +2,7 @@
 import React from 'react';
 
 // LOCAL IMPORTS
+import books from '../sampleData/bookData.js';
 
 function App() {
   return (
