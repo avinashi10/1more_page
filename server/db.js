@@ -18,7 +18,7 @@ const bookSchema = new mongoose.Schema({
     unique: true,
     required: true,
   },
-  bucket: {
+  format: {
     type: String,
     required: true,
   },
