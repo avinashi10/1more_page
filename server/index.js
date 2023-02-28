@@ -5,7 +5,7 @@ const path = require('path');
 // const cors = require('cors');
 
 // LOCAL IMPORTS
-const router = require('./router');
+const router = require('./routes.js');
 
 // CREATE EXPRESS SERVER INSTANCE
 const app = express();
@@ -19,6 +19,6 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.use('', router);
 
-const { HOST, PORT } = process.env;
+const { SITE_HOST, PORT } = process.env;
 app.listen(PORT);
-console.log(`Server listening at http://${HOST}:${PORT}`);
+console.log(`Server listening at http://${SITE_HOST}:${PORT}`);
