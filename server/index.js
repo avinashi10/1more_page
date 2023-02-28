@@ -2,7 +2,7 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-// const cors = require('cors');
+const cors = require('cors');
 
 // LOCAL IMPORTS
 const router = require('./routes.js');
@@ -12,7 +12,7 @@ const app = express();
 
 // USE MIDDLEWARE
 app.use(express.json());
-// app.use(cors());
+app.use(cors());
 
 // SERVE UP STATIC FILES
 app.use(express.static(path.join(__dirname, '../client/dist')));
