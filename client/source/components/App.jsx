@@ -7,6 +7,8 @@ import Header from './Header.jsx';
 import Results from './Results.jsx';
 import Search from './Search.jsx';
 import AgeRangeSearch from './SearchFeatures/AgeRangeSearch.jsx';
+import FormatSearch from './SearchFeatures/FormatSearch.jsx';
+import PubYearSearch from './SearchFeatures/PubYearSearch.jsx';
 
 function App() {
   // SET STATES
@@ -20,7 +22,7 @@ function App() {
     <div>
       <Header />
       <Search setUserInput={setUserInput} />
-      <AgeRangeSearch setAgeRange={setAgeRange} />
+      <AgeRangeSearch ageRange={ageRange} setAgeRange={setAgeRange} />
       <FormatSearch setFormat={setFormat} />
       <PubYearSearch setYearPub={setPubYear} />
       <Results booklist={booklist} />

@@ -1,26 +1,56 @@
 // LIBRARY IMPORTS
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // LOCAL IMPORTS
 
-function AgeRangeSearch({ setAgeRange }) {
+function AgeRangeSearch({ ageRange, setAgeRange }) {
   const ageRangeArray = ['0-2', '2-4', '4-6', '6-8', '8-10'];
+  // const ageRangeFilters = [];
+
+  // SET STATES
+  const [checkedState, setCheckedState] = useState(
+    new Array(ageRangeArray.length).fill(false),
+  );
+
+  // HANDLE EVENTS
+  const handleChange = (value, position) => {
+    const updatedCheckedState = checkedState.map((item, index) =>
+      (index === position ? !item : item));
+
+    setCheckedState(updatedCheckedState);
+
+    // setAgeRange(ageRangeFilters);
+  };
+
+  useEffect(() => {
+    checkedState.forEach((item, index) => {
+      if (item) {
+        setAgeRange([...ageRange, ageRangeArray[index]]);
+        console.log('Age Range: ', ageRange);
+      }
+    });
+  }, [checkedState]);
 
   return (
     <div>
       <h3>Age Range</h3>
-      <form>
-        <input type="checkbox" id="0-2" name="age_range" value="0-2" />
-        <label htmlFor="0-2">0-2</label>
-        <input type="checkbox" id="2-4" name="age_range" value="2-4" />
-        <label htmlFor="2-4">2-4</label>
-        <input type="checkbox" id="4-6" name="age_range" value="4-6" />
-        <label htmlFor="4-6">4-6</label>
-        <input type="checkbox" id="6-8" name="age_range" value="6-8" />
-        <label htmlFor="6-8">6-8</label>
-        <input type="checkbox" id="8-10" name="age_range" value="8-10" />
-        <label htmlFor="8-10">8-10</label>
-      </form>
+      <ul className="age_range">
+        {ageRangeArray.map((range, index) => {
+          return (
+            <li key={index}>
+              <input
+                type="checkbox"
+                id={range}
+                name="age_range"
+                value={range}
+                checked={checkedState[index]}
+                onChange={() => handleChange(range, index)}
+              />
+              <label htmlFor={range}>{range}</label>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
