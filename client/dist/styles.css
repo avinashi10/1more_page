@@ -1,0 +1,7 @@
+*,*::after,*::before{
+  margin: 0.5rem;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
