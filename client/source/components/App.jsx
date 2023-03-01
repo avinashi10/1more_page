@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 // LOCAL IMPORTS
 import books from '../sampleData/bookData.js';
 import Header from './Header.jsx';
-import Results from './Results.jsx';
-import Search from './Search.jsx';
-import AgeRangeSearch from './SearchFeatures/AgeRangeSearch.jsx';
-import FormatSearch from './SearchFeatures/FormatSearch.jsx';
-import PubYearSearch from './SearchFeatures/PubYearSearch.jsx';
+import ResultList from './ResultList.jsx';
+import SearchBar from './SearchBar.jsx';
+import AgeRangeFilter from './FilterFeatures/AgeRangeFilter.jsx';
+import FormatFilter from './FilterFeatures/FormatFilter.jsx';
+import PubYearFilter from './FilterFeatures/PubYearFilter.jsx';
 
 function App() {
   // SET STATES
@@ -21,11 +21,11 @@ function App() {
   return (
     <div>
       <Header />
-      <Search setUserInput={setUserInput} />
-      <AgeRangeSearch ageRange={ageRange} setAgeRange={setAgeRange} />
-      <FormatSearch setFormat={setFormat} />
-      <PubYearSearch setYearPub={setPubYear} />
-      <Results booklist={booklist} />
+      <SearchBar setUserInput={setUserInput} />
+      <AgeRangeFilter ageRange={ageRange} setAgeRange={setAgeRange} />
+      <FormatFilter setFormat={setFormat} />
+      <PubYearFilter setYearPub={setPubYear} />
+      <ResultList booklist={booklist} />
     </div>
   );
 }

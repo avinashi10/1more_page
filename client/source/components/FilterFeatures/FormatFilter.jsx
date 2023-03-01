@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 // LOCAL IMPORTS
 
-function FormatSearch({ setFormat }) {
+function FormatFilter({ setFormat }) {
   const formatArray = ['board book', 'picture book', 'graphic novel'];
 
   // SET STATES
@@ -34,4 +34,4 @@ function FormatSearch({ setFormat }) {
   );
 }
 
-export default FormatSearch;
+export default FormatFilter;

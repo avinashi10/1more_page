@@ -1,7 +1,7 @@
 // LIBRARY IMPORTS
 import React, { useState } from 'react';
 
-function Search({ setUserInput }) {
+function SearchBar({ setUserInput }) {
   // SET STATES
   const [currentInput, setCurrentInput] = useState('');
 
@@ -25,4 +25,4 @@ function Search({ setUserInput }) {
   );
 }
 
-export default Search;
+export default SearchBar;

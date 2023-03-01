@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 // LOCAL IMPORTS
 
-function AgeRangeSearch({ ageRange, setAgeRange }) {
+function AgeRangeFilter({ ageRange, setAgeRange }) {
   const ageRangeArray = ['0-2', '2-4', '4-6', '6-8', '8-10'];
   // const ageRangeFilters = [];
 
@@ -55,4 +55,4 @@ function AgeRangeSearch({ ageRange, setAgeRange }) {
   );
 }
 
-export default AgeRangeSearch;
+export default AgeRangeFilter;

@@ -4,7 +4,7 @@ import React from 'react';
 // LOCAL IMPORTS
 import ResultCard from './ResultCard.jsx';
 
-function Results({ booklist }) {
+function ResultList({ booklist }) {
   return (
     <div>
       <h3>Results:</h3>
@@ -13,4 +13,4 @@ function Results({ booklist }) {
   );
 }
 
-export default Results;
+export default ResultList;

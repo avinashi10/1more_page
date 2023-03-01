@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 // LOCAL IMPORTS
 
-function PubYearSearch({ setPubYear }) {
+function PubYearFilter({ setPubYear }) {
   const pubYearArray = ['2023', '2022', '2021', '2020', '2019', 'Before 2019'];
 
   // SET STATES
@@ -34,4 +34,4 @@ function PubYearSearch({ setPubYear }) {
   );
 }
 
-export default PubYearSearch;
+export default PubYearFilter;
