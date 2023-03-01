@@ -9,6 +9,7 @@ import SearchBar from './SearchBar.jsx';
 import AgeRangeFilter from './FilterFeatures/AgeRangeFilter.jsx';
 import FormatFilter from './FilterFeatures/FormatFilter.jsx';
 import PubYearFilter from './FilterFeatures/PubYearFilter.jsx';
+import StyledApp from './styles/App.styled.jsx';
 
 function App() {
   // SET STATES
@@ -19,14 +20,22 @@ function App() {
   const [pubYear, setPubYear] = useState([]);
 
   return (
-    <div>
-      <Header />
-      <SearchBar setUserInput={setUserInput} />
-      <AgeRangeFilter ageRange={ageRange} setAgeRange={setAgeRange} />
-      <FormatFilter setFormat={setFormat} />
-      <PubYearFilter setYearPub={setPubYear} />
-      <ResultList booklist={booklist} />
-    </div>
+    <StyledApp>
+      <div className="home">
+        <Header />
+        <SearchBar setUserInput={setUserInput} />
+        <div className="home_panel-list_wrapper">
+          <div className="home_panel_wrapper">
+            <AgeRangeFilter ageRange={ageRange} setAgeRange={setAgeRange} />
+            <FormatFilter setFormat={setFormat} />
+            <PubYearFilter setYearPub={setPubYear} />
+          </div>
+          <div className="home_list_wrapper">
+            <ResultList booklist={booklist} />
+          </div>
+        </div>
+      </div>
+    </StyledApp>
   );
 }
 

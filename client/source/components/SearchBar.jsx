@@ -1,5 +1,11 @@
 // LIBRARY IMPORTS
 import React, { useState } from 'react';
+import IconButton from '@mui/material/IconButton';
+import SearchIcon from '@mui/icons-material/Search';
+import TextField from '@mui/material/TextField';
+
+// LOCAL IMPORTS
+import StyledSearchBar from './styles/SearchBar.styled.jsx';
 
 function SearchBar({ setUserInput }) {
   // SET STATES
@@ -14,14 +20,21 @@ function SearchBar({ setUserInput }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={currentInput}
-        onChange={handleChange}
-      />
-      <input type="submit" value="Submit" />
-    </form>
+    <StyledSearchBar>
+      <form className="searchbar-wrapper" onSubmit={handleSubmit}>
+        <TextField
+          className="searchbar-text"
+          id="search-bar"
+          type="text"
+          onChange={handleChange}
+          variant="outlined"
+          placeholder="Search by title or author"
+        />
+        <IconButton type="submit" aria-label="search" className="searchbar-icon">
+          <SearchIcon style={{ fill: '#0F2E0F' }} />
+        </IconButton>
+      </form>
+    </StyledSearchBar>
   );
 }
 
