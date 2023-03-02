@@ -3,13 +3,16 @@ import React from 'react';
 
 // LOCAL IMPORTS
 import ResultCard from './ResultCard.jsx';
+import StyledResultList from './styles/ResultList.styled.jsx';
 
 function ResultList({ booklist }) {
   return (
-    <div>
+    <StyledResultList>
       <h3>Results:</h3>
-      {booklist.map((book) => <ResultCard key={book.ISBN} book={book} />)}
-    </div>
+      <div className="list-wrapper">
+        {booklist.map((book) => <ResultCard key={book.ISBN} book={book} />)}
+      </div>
+    </StyledResultList>
   );
 }
 
