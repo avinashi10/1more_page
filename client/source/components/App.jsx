@@ -17,10 +17,6 @@ function App() {
   const [selectedAge, setSelectedAge] = useState(null);
   const [selectedRace, setSelectedRace] = useState(null);
 
-  // const [ageRange, setAgeRange] = useState([]);
-  // const [format, setFormat] = useState([]);
-  // const [pubYear, setPubYear] = useState([]);
-
   // HANDLE EVENTS
   const handleSelectFormat = (event, value) => (!value ? null : setSelectedFormat(value));
 
@@ -43,12 +39,16 @@ function App() {
     if (selectedRace) {
       updatedList = updatedList.filter((item) => item.racial_rep === selectedRace);
     }
+    // Search Filter
+    if (userInput) {
+      updatedList = updatedList.filter((item) => item.title.toLowerCase().search(userInput.toLowerCase().trim()) !== -1);
+    }
     setBooklist(updatedList);
   };
 
   useEffect(() => {
     applyFilters();
-  }, [selectedFormat, selectedAge, selectedRace]);
+  }, [selectedFormat, selectedAge, selectedRace, userInput]);
 
   return (
     <StyledApp>
