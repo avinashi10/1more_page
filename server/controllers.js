@@ -8,7 +8,7 @@ module.exports = {
   get: (req, res) => {
     model.getAllFromDb((err, data) => {
       if (err) {
-        res.send('Uh-oh, GET error: ' + err);
+        res.status(404).send(err);
       } else {
         res.send(data);
       }
