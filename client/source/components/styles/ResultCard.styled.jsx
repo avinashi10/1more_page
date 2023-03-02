@@ -11,13 +11,16 @@ const StyledResultCard = styled.div`
 
   .listcard-wrapper header{
     display: flex;
-    justify-content: space-bewteen;
+    justify-content: space-between;
     margin: 1rem 0;
     align-items: center;
   }
 
   .listcard-wrapper footer{
-
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   `;
 

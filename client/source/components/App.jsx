@@ -1,5 +1,5 @@
 // LIBRARY IMPORTS
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // LOCAL IMPORTS
 import books from '../sampleData/bookData.js';
@@ -22,14 +22,33 @@ function App() {
   // const [pubYear, setPubYear] = useState([]);
 
   // HANDLE EVENTS
-  const handleSelectFormat = (event, value) =>
-    (!value ? null : setSelectedFormat(value));
+  const handleSelectFormat = (event, value) => (!value ? null : setSelectedFormat(value));
 
-  const handleSelectAge = (event, value) =>
-    (!value ? null : setSelectedAge(value));
+  const handleSelectAge = (event, value) => (!value ? null : setSelectedAge(value));
 
-  const handleSelectRace = (event, value) =>
-    (!value ? null : setSelectedRace(value));
+  const handleSelectRace = (event, value) => (!value ? null : setSelectedRace(value));
+
+  // HOOKS
+  const applyFilters = () => {
+    let updatedList = books;
+    // Format Filter
+    if (selectedFormat) {
+      updatedList = updatedList.filter((item) => item.format === selectedFormat);
+    }
+    // Age Filter
+    if (selectedAge) {
+      updatedList = updatedList.filter((item) => item.age_range === selectedAge);
+    }
+    // Race Filter
+    if (selectedRace) {
+      updatedList = updatedList.filter((item) => item.racial_rep === selectedRace);
+    }
+    setBooklist(updatedList);
+  };
+
+  useEffect(() => {
+    applyFilters();
+  }, [selectedFormat, selectedAge, selectedRace]);
 
   return (
     <StyledApp>

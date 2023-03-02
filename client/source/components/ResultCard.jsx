@@ -14,7 +14,8 @@ function ResultCard({ book }) {
           <p>By: {book.creators[0]['author']}</p>
         </header>
         <footer>
-
+          <p>{book.age_range}</p>
+          <p>{book.date}</p>
         </footer>
       </div>
     </StyledResultCard>

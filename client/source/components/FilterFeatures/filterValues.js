@@ -52,8 +52,8 @@ export const raceList = [
   },
   {
     id: 2,
-    value: 'Black',
-    label: 'Black',
+    value: 'Multiracial',
+    label: 'Multiracial',
   },
   {
     id: 3,
@@ -62,8 +62,8 @@ export const raceList = [
   },
   {
     id: 4,
-    value: 'East Asian',
-    label: 'East Asian',
+    value: 'Black',
+    label: 'Black',
   },
   {
     id: 5,
@@ -82,7 +82,7 @@ export const raceList = [
   },
   {
     id: 8,
-    value: 'Multiracial',
-    label: 'Multiracial',
+    value: 'East Asian',
+    label: 'East Asian',
   },
 ];
