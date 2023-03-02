@@ -3,20 +3,25 @@ require('dotenv').config();
 const axios = require('axios');
 
 const { API_URL, API_TOKEN, GOOGLE_LIB_ID } = process.env;
+
 console.log(API_URL, process.env.API_URL);
 const url = `${API_URL}/users/${GOOGLE_LIB_ID}/bookshelves/1003/volumes`;
 console.log('url: ', url);
 
 // GET 2018 bookshelf books from API
-axios.get(`${API_URL}/users/${GOOGLE_LIB_ID}/bookshelves/1003/volumes`, {
+const config = {
+  method: 'get',
+  maxBodyLength: Infinity,
+  url: 'https://www.googleapis.com/books/v1/users//bookshelves/1002/volumes',
   headers: {
-    Authorization: API_TOKEN
+    'Authorization': '',
   },
-})
+};
+
+axios(config)
   .then((response) => {
-    const extracted2018 = response.data;
-    console.log('TEST', extracted2018);
+    const extraction2018 = (JSON.stringify(response.data));
   })
   .catch((error) => {
-    // console.error(error);
+    console.log(error);
   });
