@@ -5,7 +5,6 @@ import React, { useState, useEffect } from 'react';
 
 function AgeRangeFilter({ ageRange, setAgeRange }) {
   const ageRangeArray = ['0-2', '2-4', '4-6', '6-8', '8-10'];
-  // const ageRangeFilters = [];
 
   // SET STATES
   const [checkedState, setCheckedState] = useState(
@@ -14,12 +13,8 @@ function AgeRangeFilter({ ageRange, setAgeRange }) {
 
   // HANDLE EVENTS
   const handleChange = (value, position) => {
-    const updatedCheckedState = checkedState.map((item, index) =>
-      (index === position ? !item : item));
-
+    const updatedCheckedState = checkedState.map((item, index) => (index === position ? !item : item));
     setCheckedState(updatedCheckedState);
-
-    // setAgeRange(ageRangeFilters);
   };
 
   useEffect(() => {
