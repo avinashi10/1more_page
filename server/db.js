@@ -5,11 +5,11 @@ mongoose.connect('mongodb://localhost/library');
 
 // 2. Set up any schema and models needed by the app
 const bookSchema = new mongoose.Schema({
-  _id: {
-    type: Number,
-    unique: true,
-  },
   google_books_id: {
+    type: String,
+    required: true,
+  },
+  isbn13: {
     type: Number,
     unique: true,
     required: true,
@@ -20,17 +20,13 @@ const bookSchema = new mongoose.Schema({
   },
   format: {
     type: String,
-    required: true,
   },
   age_range: {
     type: String,
-    required: true,
   },
-  themes: [
-    {
-      type: String,
-    },
-  ],
+  race_rep: {
+    type: String,
+  },
 });
 const Book = mongoose.model('Book', bookSchema);
 
@@ -57,4 +53,4 @@ const Book = mongoose.model('Book', bookSchema);
 // const Creator = mongoose.model('Creator', creatorSchema);
 
 // 3. Export the models
-module.exports = { Book };
+module.exports = Book;
