@@ -2,14 +2,23 @@
 import React from 'react';
 
 // LOCAL IMPORTS
+import StyledResultCard from './styles/ResultCard.styled.jsx';
 
 function ResultCard({ book }) {
   return (
-    <div>
-      <h4>{book.title}</h4>
-      <img src={book.cover} alt="cover" />
-      <p>By: {book.creators[0]['author']}</p>
-    </div>
+    <StyledResultCard>
+      <div className="listcard-wrapper">
+        <img src={book.cover} alt="cover" />
+        <header>
+          <h4>{book.title}</h4>
+          <p>By: {book.creators[0]['author']}</p>
+        </header>
+        <footer>
+          <p>{book.age_range}</p>
+          <p>{book.date}</p>
+        </footer>
+      </div>
+    </StyledResultCard>
   );
 }
 

@@ -22,12 +22,14 @@ const StyledApp = styled.div`
     background: #D4A373;
     flex-basis: 18rem;
     height: 100vh;
+    padding: 1rem;
   }
 
   .home_list_wrapper {
     background: #CCD5AE;
     flex: 1;
     height: 100vh;
+    padding: 1rem;
   }
 `;
 
