@@ -4,8 +4,8 @@
 const { getFromBookshelf } = require('./extract.js');
 const model = require('../models.js');
 
-const transformLoad = () => {
-  getFromBookshelf(1002)
+const transformLoad = (shelfId) => {
+  getFromBookshelf(shelfId)
     .then((response) => {
       const transformedData = response.data.items.map((item) => {
         return {
@@ -26,4 +26,7 @@ const transformLoad = () => {
     .catch((err) => console.error(err));
 };
 
-transformLoad();
+model.clearDb();
+
+const shelfIds = [1003, 1002, 1001, 1004, 1006, 1005];
+shelfIds.forEach((id) => transformLoad(id));

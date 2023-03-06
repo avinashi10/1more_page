@@ -6,12 +6,10 @@ const model = require('./models.js');
 
 module.exports = {
   get: (req, res) => {
-    model.getAllFromDb((err, data) => {
-      if (err) {
-        res.status(404).send(err);
-      } else {
+    model.getAllFromDb()
+      .then((data) => {
         res.send(data);
-      }
-    });
+      })
+      .catch((err) => res.status(404).send(err));
   },
 };

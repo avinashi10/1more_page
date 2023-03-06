@@ -16,16 +16,14 @@ module.exports = {
         cb(err);
       });
   },
-  clearDb: Book.deleteMany({}),
+  clearDb: () => {
+    Book.deleteMany({})
+      .then(() => console.log('DB cleared!'))
+      .catch((err) => console.log('Error clearing db: ', err));
+  },
 
   // CLIENT REQUESTS
-  getAllFromDb: (cb) => {
-    Book.find({}, (err, data) => {
-      if (err) {
-        cb(err);
-      } else {
-        cb(null, data);
-      }
-    });
+  getAllFromDb: () => {
+    return Book.find({});
   },
 };
