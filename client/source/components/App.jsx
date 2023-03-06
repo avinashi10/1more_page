@@ -12,7 +12,7 @@ import StyledApp from './styles/App.styled.jsx';
 
 function App() {
   // SET STATES
-  const [booklist, setBooklist] = useState(books);
+  const [booklist, setBooklist] = useState([]);
   const [userInput, setUserInput] = useState('');
   const [selectedFormat, setSelectedFormat] = useState(null);
   const [selectedAge, setSelectedAge] = useState(null);
@@ -33,7 +33,7 @@ function App() {
   }, []);
 
   const applyFilters = () => {
-    let updatedList = books;
+    let updatedList = booklist;
     // Format Filter
     if (selectedFormat) {
       updatedList = updatedList.filter((item) => item.format === selectedFormat);

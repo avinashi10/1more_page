@@ -10,7 +10,7 @@ function ResultList({ booklist }) {
     <StyledResultList>
       <h3>Results:</h3>
       <div className="list-wrapper">
-        {booklist.map((book) => <ResultCard key={book.ISBN} book={book} />)}
+        {booklist.map((book) => <ResultCard key={book.isbn13} book={book} />)}
       </div>
     </StyledResultList>
   );
