@@ -8,9 +8,10 @@ const transformLoad = (shelfId) => {
   getFromBookshelf(shelfId)
     .then((response) => {
       const transformedData = response.data.items.map((item) => {
+        const isbn13Only = item.volumeInfo.industryIdentifiers.filter((element) => element.type === 'ISBN_13');
         return {
           google_books_id: item.id,
-          isbn13: parseInt(item.volumeInfo.industryIdentifiers[0].identifier),
+          isbn13: parseInt(isbn13Only[0].identifier),
           title: item.volumeInfo.title,
           age_range: '',
           race_rep: '',

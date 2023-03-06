@@ -1,5 +1,6 @@
 // LIBRARY IMPORTS
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 // LOCAL IMPORTS
 import books from '../sampleData/bookData.js';
@@ -25,6 +26,12 @@ function App() {
   const handleSelectRace = (event, value) => (!value ? null : setSelectedRace(value));
 
   // HOOKS
+  useEffect(() => {
+    axios.get('/books')
+      .then(({ data }) => setBooklist(data))
+      .catch((err) => console.error(err));
+  }, []);
+
   const applyFilters = () => {
     let updatedList = books;
     // Format Filter

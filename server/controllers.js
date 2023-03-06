@@ -5,8 +5,22 @@ const express = require('express');
 const model = require('./models.js');
 
 module.exports = {
-  get: (req, res) => {
+  getAll: (req, res) => {
     model.getAllFromDb()
+      .then((data) => {
+        res.send(data);
+      })
+      .catch((err) => res.status(404).send(err));
+  },
+  getOne: (req, res) => {
+    model.getOneFromDb(req.params)
+      .then((data) => {
+        res.send(data);
+      })
+      .catch((err) => res.status(404).send(err));
+  },
+  update: (req, res) => {
+    model.updateInDb(req.params.isbn, req.body.ageRange, req.body.raceRep)
       .then((data) => {
         res.send(data);
       })
