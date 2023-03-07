@@ -1,13 +1,9 @@
 // LIBRARY IMPORTS
 import React, { useState } from 'react';
-import { Flex, Input } from '@chakra-ui/react';
+import { Flex, Input, IconButton } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 
-import IconButton from '@mui/material/IconButton';
-import TextField from '@mui/material/TextField';
-
 // LOCAL IMPORTS
-import StyledSearchBar from './styles/SearchBar.styled.jsx';
 
 function SearchBar({ setUserInput }) {
   // SET STATES
@@ -27,8 +23,8 @@ function SearchBar({ setUserInput }) {
         alignItems="center"
         borderBottom=".1rem"
         borderStyle="solid"
-        borderColor="brand.forest_green"
-        bg="plum.50"
+        borderColor="brand.sage_green"
+        bg="#fdf8ec"
         p="1.5rem 1.5rem"
       >
         <Input
@@ -36,8 +32,15 @@ function SearchBar({ setUserInput }) {
           onChange={handleChange}
           variant="flushed"
           placeholder="Search by title"
+          borderColor="brand.forest_green"
         />
-        <SearchIcon color="brand.forest_green" />
+        <IconButton
+          color="brand.forest_green"
+          variant="outline"
+          aria-label="Search for book by title"
+          type="submit"
+          icon={<SearchIcon />}
+        />
       </Flex>
     </form>
   );

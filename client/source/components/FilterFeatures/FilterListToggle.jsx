@@ -5,12 +5,20 @@ import { Button, ButtonGroup, VStack } from '@chakra-ui/react';
 
 function FilterListToggle({ options, value, selectToggle }) {
   return (
-    <VStack value={value} onChange={selectToggle}>
-      {options.map(({ label, id, value }) => (
-        <Button key={id} value={value}>
-          {label}
-        </Button>))}
-    </VStack>
+    <ButtonGroup onChange={selectToggle}>
+      <VStack value={value}>
+        {options.map(({ label, id, value }) => (
+          <Button
+            key={id}
+            value={value}
+            type="radio"
+            onClick={}
+          >
+            {label}
+          </Button>
+        ))}
+      </VStack>
+    </ButtonGroup>
   );
 }
 

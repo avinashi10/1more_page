@@ -17,7 +17,7 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    heading: '\'Poppins\', sans-serif',
+    heading: '\'DM Sans\', sans-serif',
     body: '\'DM Sans\', sans-serif',
 
   },

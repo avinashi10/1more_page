@@ -9,11 +9,12 @@ import StyledResultList from './styles/ResultList.styled.jsx';
 function ResultList({ booklist }) {
   return (
     <Grid
-      gridTemplateColumns="repeat(4, 1fr)"
+      gridTemplateColumns="repeat(5, minmax(10rem, 1fr))"
       gridGap=".5rem"
-      bg="brand.sage_green"
+      bg="#E9EDDC"
       h="100vh"
-      p="1rem"
+      w="100vw"
+      p="4rem"
       overflowY="auto"
     >
       {booklist.map((book) => <ResultCard key={book.isbn13} book={book} />)}

@@ -12,7 +12,7 @@ function FilterPanel({ selectedFormat, selectFormat, selectedAge, selectAge, sel
       flexDir="column"
       p="1rem"
       flexBasis="18rem"
-      bg="brand.orange"
+      bg="#F3E5D7"
       h="100vh"
       overflowY="auto"
     >

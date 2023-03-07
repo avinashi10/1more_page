@@ -39,7 +39,7 @@ function ResultCard({ book }) {
       border=".1rem"
       borderRadius=".5rem"
       borderStyle="solid"
-      borderColor="#B5C38A"
+      borderColor="brand.sage_green"
     >
       <Center
         bg="brand.light"
@@ -67,7 +67,7 @@ function ResultCard({ book }) {
         Ages: {book.age_range}
       </Text>
       <Text>
-        Published: {googleBook?.publishedDate}
+        Published: {googleBook?.publishedDate.substring(0,4)}
       </Text>
     </GridItem>
   );

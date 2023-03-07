@@ -1,5 +1,5 @@
 // LIBRARY IMPORTS
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { Flex } from '@chakra-ui/react';
 
@@ -17,6 +17,7 @@ function App() {
   const [selectedFormat, setSelectedFormat] = useState(null);
   const [selectedAge, setSelectedAge] = useState(null);
   const [selectedRace, setSelectedRace] = useState(null);
+  const booksRef = useRef([]);
 
   // HANDLE EVENTS
   const handleSelectFormat = (event, value) => (!value ? null : setSelectedFormat(value));
@@ -28,12 +29,15 @@ function App() {
   // HOOKS
   useEffect(() => {
     axios.get('/books')
-      .then(({ data }) => setBooklist(data))
+      .then(({ data }) => {
+        setBooklist(data);
+        booksRef.current = data;
+      })
       .catch((err) => console.error(err));
   }, []);
 
   const applyFilters = () => {
-    let updatedList = booklist;
+    let updatedList = booksRef.current;
     // Format Filter
     if (selectedFormat) {
       updatedList = updatedList.filter((item) => item.format === selectedFormat);
@@ -59,9 +63,8 @@ function App() {
 
   return (
     <Flex flexDir="column" h="100vh">
-      <Header />
       <SearchBar setUserInput={setUserInput} />
-      <Flex flex="1" h="100vh">
+      <Flex flex="1" h="100vh" w="100vw">
         <FilterPanel
           selectFormat={handleSelectFormat}
           selectedFormat={selectedFormat}
