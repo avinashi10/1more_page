@@ -20,11 +20,11 @@ function App() {
   const booksRef = useRef([]);
 
   // HANDLE EVENTS
-  const handleSelectFormat = (event, value) => (!value ? null : setSelectedFormat(value));
+  const handleSelectFormat = (value) => (!value ? null : setSelectedFormat(value));
 
-  const handleSelectAge = (event, value) => (!value ? null : setSelectedAge(value));
+  const handleSelectAge = (value) => (!value ? null : setSelectedAge(value));
 
-  const handleSelectRace = (event, value) => (!value ? null : setSelectedRace(value));
+  const handleSelectRace = (value) => (!value ? null : setSelectedRace(value));
 
   // HOOKS
   useEffect(() => {
