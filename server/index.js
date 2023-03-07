@@ -1,5 +1,4 @@
 // LIBRARY IMPORTS
-require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
@@ -9,6 +8,7 @@ const router = require('./routes.js');
 
 // CREATE EXPRESS SERVER INSTANCE
 const app = express();
+require('dotenv').config();
 
 // USE MIDDLEWARE
 app.use(express.json());
