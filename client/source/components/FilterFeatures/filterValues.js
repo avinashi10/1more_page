@@ -72,8 +72,8 @@ export const raceList = [
   },
   {
     id: 6,
-    value: 'Native Hawaian/Pacific Islander',
-    label: 'Native Hawaian/Pacific Islander',
+    value: 'Native Hawaiian/Pacific Islander',
+    label: 'Native Hawaiian/Pacific Islander',
   },
   {
     id: 7,
