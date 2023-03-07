@@ -1,9 +1,9 @@
 // LIBRARY IMPORTS
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Flex } from '@chakra-ui/react';
 
 // LOCAL IMPORTS
-import books from '../sampleData/bookData.js';
 import Header from './Header.jsx';
 import ResultList from './ResultList.jsx';
 import SearchBar from './SearchBar.jsx';
@@ -58,20 +58,23 @@ function App() {
   }, [selectedFormat, selectedAge, selectedRace, userInput]);
 
   return (
-    <StyledApp>
-      <div className="home">
-        <Header />
-        <SearchBar setUserInput={setUserInput} />
-        <div className="home_panel-list_wrapper">
-          <div className="home_panel_wrapper">
-            <FilterPanel selectFormat={handleSelectFormat} selectedFormat={selectedFormat} selectAge={handleSelectAge} selectedAge={selectedAge} selectedRace={selectedRace} selectRace={handleSelectRace} />
-          </div>
-          <div className="home_list_wrapper">
-            <ResultList booklist={booklist} />
-          </div>
-        </div>
-      </div>
-    </StyledApp>
+    <Flex flexDir="column" h="100vh">
+      <Header />
+      <SearchBar setUserInput={setUserInput} />
+      <Flex flex="1" h="100vh">
+        <FilterPanel
+          selectFormat={handleSelectFormat}
+          selectedFormat={selectedFormat}
+          selectAge={handleSelectAge}
+          selectedAge={selectedAge}
+          selectedRace={selectedRace}
+          selectRace={handleSelectRace}
+        />
+        <ResultList
+          booklist={booklist}
+        />
+      </Flex>
+    </Flex>
   );
 }
 

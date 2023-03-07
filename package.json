@@ -19,6 +19,8 @@
     "test": "test"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.17",
+    "@chakra-ui/react": "^2.5.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.11",
@@ -28,6 +30,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "framer-motion": "^10.1.0",
     "mongoose": "^7.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

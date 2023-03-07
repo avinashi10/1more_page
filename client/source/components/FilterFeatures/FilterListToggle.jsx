@@ -1,15 +1,16 @@
 // LIBRARY IMPORTS
 import React from 'react';
-import { ToggleButtonGroup, ToggleButton } from '@mui/material';
+import { Button, ButtonGroup, VStack } from '@chakra-ui/react';
+// import { ToggleButtonGroup, ToggleButton } from '@mui/material';
 
 function FilterListToggle({ options, value, selectToggle }) {
   return (
-    <ToggleButtonGroup value={value} onChange={selectToggle} exclusive>
+    <VStack value={value} onChange={selectToggle}>
       {options.map(({ label, id, value }) => (
-        <ToggleButton key={id} value={value}>
+        <Button key={id} value={value}>
           {label}
-        </ToggleButton>))}
-    </ToggleButtonGroup>
+        </Button>))}
+    </VStack>
   );
 }
 
