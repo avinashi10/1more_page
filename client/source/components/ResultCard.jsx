@@ -35,6 +35,7 @@ function ResultCard({ book }) {
     <GridItem
       display="grid"
       maxW="10rem"
+      maxH="21rem"
       p="1"
       border=".1rem"
       borderRadius=".5rem"

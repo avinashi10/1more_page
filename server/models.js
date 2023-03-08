@@ -31,7 +31,7 @@ module.exports = {
     return Book.find({ isbn13: isbn });
   },
 
-  updateInDb: (isbn, ageRange, raceRep) => {
-    return Book.findOneAndUpdate({ isbn13: isbn }, { age_range: ageRange, race_rep: raceRep });
+  updateInDb: (isbn, ageRange, raceRep, format) => {
+    return Book.findOneAndUpdate({ isbn13: isbn }, { age_range: ageRange, race_rep: raceRep, format: format });
   },
 };

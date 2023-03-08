@@ -8,7 +8,6 @@ import Header from './Header.jsx';
 import ResultList from './ResultList.jsx';
 import SearchBar from './SearchBar.jsx';
 import FilterPanel from './FilterPanel.jsx';
-import StyledApp from './styles/App.styled.jsx';
 
 function App() {
   // SET STATES
@@ -48,7 +47,7 @@ function App() {
     }
     // Race Filter
     if (selectedRace) {
-      updatedList = updatedList.filter((item) => item.racial_rep === selectedRace);
+      updatedList = updatedList.filter((item) => item.race_rep === selectedRace);
     }
     // Search Filter
     if (userInput) {

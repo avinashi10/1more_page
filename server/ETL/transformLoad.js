@@ -13,6 +13,7 @@ const transformLoad = (shelfId) => {
           google_books_id: item.id,
           isbn13: parseInt(isbn13Only[0].identifier),
           title: item.volumeInfo.title,
+          format: '',
           age_range: '',
           race_rep: '',
         }; });
@@ -27,7 +28,14 @@ const transformLoad = (shelfId) => {
     .catch((err) => console.error(err));
 };
 
-model.clearDb();
+// model.clearDb();
 
-const shelfIds = [1003, 1002, 1001, 1004, 1006, 1005];
-shelfIds.forEach((id) => transformLoad(id));
+// const shelfIds = [1003, 1002, 1001, 1004, 1006, 1005];
+// shelfIds.forEach((id) => transformLoad(id));
+
+transformLoad(1001);
+transformLoad(1002);
+transformLoad(1003);
+transformLoad(1004);
+transformLoad(1005);
+transformLoad(1006);

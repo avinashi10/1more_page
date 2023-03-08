@@ -2,17 +2,17 @@ export const formatList = [
   {
     id: 1,
     value: 'board book',
-    label: 'board books',
+    label: 'board book',
   },
   {
     id: 2,
     value: 'picture book',
-    label: 'picture books',
+    label: 'picture book',
   },
   {
     id: 3,
     value: 'graphic novel',
-    label: 'graphic novels',
+    label: 'graphic novel',
   },
 ];
 
@@ -47,42 +47,42 @@ export const ageList = [
 export const raceList = [
   {
     id: 1,
-    value: 'South Asian',
+    value: 'south asian',
     label: 'South Asian',
   },
   {
     id: 2,
-    value: 'Multiracial',
+    value: 'multiracial',
     label: 'Multiracial',
   },
   {
     id: 3,
-    value: 'Native American',
+    value: 'native american',
     label: 'Native American',
   },
   {
     id: 4,
-    value: 'Black',
+    value: 'black',
     label: 'Black',
   },
   {
     id: 5,
-    value: 'Middle Eastern',
+    value: 'middle eastern',
     label: 'Middle Eastern',
   },
   {
     id: 6,
-    value: 'Native Hawaiian/Pacific Islander',
+    value: 'native hawaiian/pacific islander',
     label: 'Native Hawaiian/Pacific Islander',
   },
   {
     id: 7,
-    value: 'Southeast Asian',
+    value: 'southeast asian',
     label: 'Southeast Asian',
   },
   {
     id: 8,
-    value: 'East Asian',
+    value: 'east asian',
     label: 'East Asian',
   },
 ];
