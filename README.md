@@ -37,7 +37,7 @@
 ## Getting Started
 1. Clone the repository
 ```
-git clone https://github.com/avinashi10/1more_page
+git clone https://github.com/avinashi10/1more_page.git
 ```
 2. Install all the dependencies
 ```
