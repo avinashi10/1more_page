@@ -34,7 +34,9 @@ function ResultCard({ book }) {
   return (
     <GridItem
       display="grid"
-      maxW="10rem"
+      maxW={{
+        base: '100%', sm: '10rem', md: '18rem', lg: '25rem', xl: '30rem',
+      }}
       maxH="21rem"
       p="1"
       border=".1rem"

@@ -6,6 +6,18 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import App from './App.jsx';
 
 const theme = extendTheme({
+  components: {
+    Checkbox: {
+      baseStyle: {
+        control: {
+          _focus: {
+            boxShadow: 'none',
+            borderColor: 'black',
+          },
+        },
+      },
+    },
+  },
   colors: {
     brand: {
       black: '#0a1f0a',
@@ -19,7 +31,6 @@ const theme = extendTheme({
   fonts: {
     heading: '\'DM Sans\', sans-serif',
     body: '\'DM Sans\', sans-serif',
-
   },
 });
 
