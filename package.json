@@ -1,6 +1,6 @@
 {
   "name": "1more_page",
-  "description": "Senior MVP Children's Book Search Website",
+  "description": "A children's book search & filter website",
   "version": "1.0.0",
   "main": "index.js",
   "repository": {
