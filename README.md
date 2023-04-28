@@ -43,11 +43,10 @@ git clone https://github.com/avinashi10/1more_page
 ```
 npm install
 ```
-3. Starting Webpack and the Server
+3. Start Webpack and the server
 ```
 npm run client-dev
 npm run server-dev
 ```
-4. Navigate to Page
-Navigate to localhost/3000 in your local browser
+4. Navigate to localhost:3000 in your local browser
 
