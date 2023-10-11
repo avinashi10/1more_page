@@ -7,9 +7,7 @@ import { GridItem, Heading, Image, Text, Center } from '@chakra-ui/react';
 
 function ResultCard({ book }) {
   // SET STATE
-  // const [googleId, setGoogleId] = useState(book.google_books_id);
   const [googleBook, setGoogleBook] = useState(null);
-  const imgURL = `https://books.google.com/books/content?id=${book?.google_books_id}&printsec=frontcover&img=1`;
 
   // HOOKS
   useEffect(() => {
@@ -18,7 +16,7 @@ function ResultCard({ book }) {
       maxBodyLength: Infinity,
       url: `https://www.googleapis.com/books/v1/volumes/${book?.google_books_id}`,
       headers: {
-        'Authorization': 'AIzaSyBzu1ILX3_H7tqbI-dyFfobH4p1LCNlB8Y'
+        Authorization: 'AIzaSyBzu1ILX3_H7tqbI-dyFfobH4p1LCNlB8Y',
       },
     };
 
