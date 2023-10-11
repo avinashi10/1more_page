@@ -1,6 +1,6 @@
 // LIBRARY IMPORTS
 import React, { useState } from 'react';
-import { Button, Flex, FormControl, FormLabel, Input, IconButton, Image, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton } from '@chakra-ui/react';
+import { Button, Flex, FormControl, Input, IconButton, Image, Link, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 
 // LOCAL IMPORTS
@@ -22,7 +22,7 @@ function SearchBar({ setUserInput }) {
   };
 
   return (
-    <Flex as="header" justifyContent="space-between" alignItems="center" borderBottom=".1rem" borderStyle="solid" borderColor="brand.sage_green" bg="#fdf8ec" p=".2rem .5rem">
+    <Flex as="header" justifyContent="space-between" alignItems="center" borderBottom=".1rem" borderStyle="solid" borderColor="brand.sage_green" bg="brand.light" p=".2rem .5rem">
       <Image src={logo} alt="App Logo" boxSize="150px" flexShrink={0} />
       <FormControl
         as="form"
@@ -32,7 +32,7 @@ function SearchBar({ setUserInput }) {
         onSubmit={handleSubmit}
         display="flex"
         alignItems="center"
-        bg="#fdf8ec"
+        bg="brand.light"
         p="1.5rem 1.5rem"
       >
         <Input
@@ -55,11 +55,18 @@ function SearchBar({ setUserInput }) {
       </Button>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>About Archaa</ModalHeader>
+        <ModalContent bg="brand.light">
+          <ModalHeader>About One More Page</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            Archaa is a passionate developer who loves books and coding!
+            This website was built by Archaa Shrivastav, a software engineer, children&apos;s book expert, and author! Learn more about her work as a software engineer
+            {' '}
+            <Link href="https://www.archaareads.com/code" isExternal fontWeight="bold" textDecoration="underline">here</Link>
+            {' '}
+            and her work as an author
+            {' '}
+            <Link href="https://wwww.archaareads.com" isExternal fontWeight="bold" textDecoration="underline">here</Link>
+            .
           </ModalBody>
         </ModalContent>
       </Modal>
