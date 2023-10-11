@@ -4,7 +4,6 @@ import { Grid } from '@chakra-ui/react';
 
 // LOCAL IMPORTS
 import ResultCard from './ResultCard.jsx';
-import StyledResultList from './styles/ResultList.styled.jsx';
 
 function ResultList({ booklist }) {
   return (

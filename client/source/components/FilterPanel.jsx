@@ -1,10 +1,9 @@
 // LIBRARY IMPORTS
-import React, { useState, useEffect } from 'react';
-import { Flex, Heading } from '@chakra-ui/react';
+import React from 'react';
+import { Box, Flex, Heading } from '@chakra-ui/react';
 
 // LOCAL IMPORTS
 import CheckboxList from './FilterFeatures/CheckboxList.jsx';
-import RadioButtonList from './FilterFeatures/RadioButtonList.jsx';
 import { formatList, ageList, raceList } from './FilterFeatures/filterValues.js';
 
 function FilterPanel({ handleFormatChecked, handleRaceChecked, handleAgeChecked }) {
@@ -17,21 +16,18 @@ function FilterPanel({ handleFormatChecked, handleRaceChecked, handleAgeChecked 
       h="100vh"
       overflowY="auto"
     >
-      <div className="input-group">
-        <Heading size="sm">Format</Heading>
-        {/* <RadioButtonList options={formatList} value={selectedFormat} selectToggle={selectFormat} /> */}
+      <Box mb={4}>
+        <Heading size="md" mb={2}>Format</Heading>
         <CheckboxList options={formatList} handleChecked={handleFormatChecked} />
-      </div>
-      <div className="input-group">
-        <Heading size="sm">Ages</Heading>
-        {/* <RadioButtonList options={formatList} value={selectedFormat} selectToggle={selectFormat} /> */}
+      </Box>
+      <Box mb={4}>
+        <Heading size="md" mb={2}>Ages</Heading>
         <CheckboxList options={ageList} handleChecked={handleAgeChecked} />
-      </div>
-      <div className="input-group">
-        <Heading size="sm">Racial Identity</Heading>
-        {/* <RadioButtonList options={formatList} value={selectedFormat} selectToggle={selectFormat} /> */}
+      </Box>
+      <Box>
+        <Heading size="md" mb={2}>Racial Identity</Heading>
         <CheckboxList options={raceList} handleChecked={handleRaceChecked} />
-      </div>
+      </Box>
     </Flex>
   );
 }

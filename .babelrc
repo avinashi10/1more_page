@@ -1,0 +1,12 @@
+{
+  "presets": ["@babel/env", "@babel/preset-react"],
+  "plugins": ["babel-plugin-styled-components"],
+  "env": {
+    "development": {
+      "presets": [
+        ["@babel/preset-env", { "development": true }],
+        ["@babel/preset-react", { "development": true }]
+      ]
+    }
+  }
+}

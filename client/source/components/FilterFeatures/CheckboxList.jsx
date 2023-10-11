@@ -13,7 +13,7 @@ function CheckboxList({ options, handleChecked }) {
             id={id}
             key={id}
             onChange={() => handleChecked(id)}
-            border-color="black"
+            borderColor="black"
           >
             {label}
           </Checkbox>

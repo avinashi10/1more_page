@@ -87,7 +87,7 @@ function App() {
       filteredList = filteredList.filter((book) => book.title.toLowerCase().search(userInput.toLowerCase().trim()) !== -1);
     }
     setBooklist(filteredList);
-    console.log('FILTER LIST: ', filteredList);
+    // console.log('FILTER LIST: ', filteredList);
   };
 
   useEffect(() => {
