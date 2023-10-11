@@ -35,7 +35,7 @@ function ResultCard({ book }) {
       maxW={{
         base: '100%', sm: '10rem', md: '18rem', lg: '25rem', xl: '30rem',
       }}
-      maxH="21rem"
+      maxH="23rem"
       p="1"
       border=".1rem"
       borderRadius=".5rem"
