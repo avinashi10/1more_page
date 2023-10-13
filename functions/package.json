@@ -22,9 +22,8 @@
     "mongoose": "^7.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.15.0",
-    "eslint-config-google": "^0.14.0",
-    "firebase-functions-test": "^3.1.0"
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
   },
   "private": true
 }
