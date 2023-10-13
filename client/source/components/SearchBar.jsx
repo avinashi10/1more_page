@@ -4,8 +4,8 @@ import { Button, Flex, FormControl, Input, IconButton, Image, Link, useDisclosur
 import { SearchIcon } from '@chakra-ui/icons';
 
 // LOCAL IMPORTS
-import logo from '../images/OMPLogo.png';
-import headshot from '../images/headshot.png';
+import logo from '../../dist/images/OMPLogo.png';
+import headshot from '../../dist/images/headshot.png';
 
 function SearchBar({ setUserInput }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -22,7 +22,7 @@ function SearchBar({ setUserInput }) {
   };
 
   return (
-    <Flex as="header" justifyContent="space-between" alignItems="center" borderBottom=".1rem" borderStyle="solid" borderColor="brand.sage_green" bg="brand.light" p=".2rem .5rem">
+    <Flex as="header" justifyContent="space-between" alignItems="center" borderBottom=".1rem" borderStyle="solid" borderColor="brand.sage_green" bg="radial-gradient(circle at 10% 20%, #0F7478, transparent), radial-gradient(circle at 90% 80%, #D3F6BB, transparent), linear-gradient(to bottom right, #68DFE6, #7AC6AB)" p=".2rem .5rem">
       <Image src={logo} alt="App Logo" boxSize="150px" flexShrink={0} />
       <FormControl
         as="form"
@@ -32,7 +32,6 @@ function SearchBar({ setUserInput }) {
         onSubmit={handleSubmit}
         display="flex"
         alignItems="center"
-        bg="brand.light"
         p="1.5rem 1.5rem"
       >
         <Input
