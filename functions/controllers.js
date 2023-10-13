@@ -1,4 +1,5 @@
 // LIBRARY IMPORTS
+// eslint-disable-next-line no-unused-vars
 const express = require('express');
 
 // LOCAL IMPORTS
