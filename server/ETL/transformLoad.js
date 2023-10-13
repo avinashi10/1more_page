@@ -11,12 +11,13 @@ const transformLoad = (shelfId) => {
         const isbn13Only = item.volumeInfo.industryIdentifiers.filter((element) => element.type === 'ISBN_13');
         return {
           google_books_id: item.id,
-          isbn13: parseInt(isbn13Only[0].identifier),
+          isbn13: parseInt(isbn13Only[0].identifier, 10),
           title: item.volumeInfo.title,
           format: '',
           age_range: '',
           race_rep: '',
-        }; });
+        };
+      });
       model.createInDb(transformedData, (err, res) => {
         if (err) {
           console.log('Uh-oh, error loading data: ', err);

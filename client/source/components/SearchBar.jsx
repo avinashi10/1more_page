@@ -1,6 +1,8 @@
 // LIBRARY IMPORTS
 import React, { useState } from 'react';
-import { Button, Flex, FormControl, Input, IconButton, Image, Link, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton } from '@chakra-ui/react';
+import {
+  Button, Flex, FormControl, Input, IconButton, Image, Link, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton,
+} from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 
 // LOCAL IMPORTS

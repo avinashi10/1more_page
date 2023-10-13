@@ -12,7 +12,7 @@ module.exports = {
       maxBodyLength: Infinity,
       url: `${API_URL}/users/${GOOGLE_LIB_ID}/bookshelves/${shelfId}/volumes`,
       headers: {
-        'Authorization': API_TOKEN,
+        Authorization: API_TOKEN,
       },
     };
     return axios(config);

@@ -50,6 +50,12 @@ export const ageList = [
     checked: false,
     label: '8-10',
   },
+  {
+    id: 6,
+    value: '10-12',
+    checked: false,
+    label: '10-12',
+  },
 ];
 
 export const raceList = [

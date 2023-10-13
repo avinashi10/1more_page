@@ -4,7 +4,6 @@ import axios from 'axios';
 import { Flex } from '@chakra-ui/react';
 
 // LOCAL IMPORTS
-import Header from './Header.jsx';
 import ResultList from './ResultList.jsx';
 import SearchBar from './SearchBar.jsx';
 import FilterPanel from './FilterPanel.jsx';
