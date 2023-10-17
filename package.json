@@ -18,6 +18,7 @@
     "server-dev": "npx nodemon --watch server server/index.js",
     "client-dev": "npx webpack --watch",
     "test": "test",
+    "install:functions": "cd functions && npm install && cd ..",
     "build": "npx webpack --mode production",
     "seed": "node functions/ETL/transformLoad.js"
   },
