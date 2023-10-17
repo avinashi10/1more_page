@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const functions = require('firebase-functions');
+// eslint-disable-next-line import/no-extraneous-dependencies
 require('dotenv').config({ path: '/Users/archaareads/Documents/Code/MVP/1more_page/.env' });
 
 const MONGODB_URI = process.env.NODE_ENV !== 'production'

@@ -3,6 +3,7 @@ const functions = require('firebase-functions');
 const axios = require('axios');
 
 // LOCAL IMPORTS
+// eslint-disable-next-line import/no-extraneous-dependencies
 require('dotenv').config({ path: '/Users/archaareads/Documents/Code/MVP/1more_page/.env' });
 
 const API_URL = process.env.NODE_ENV !== 'production'
