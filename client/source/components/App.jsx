@@ -46,7 +46,7 @@ function App() {
 
   // HOOKS
   useEffect(() => {
-    axios.get('/books')
+    axios.get('https://us-central1-one-more-page.cloudfunctions.net/api/books')
       .then(({ data }) => {
         setBooklist(data);
         booksRef.current = data;

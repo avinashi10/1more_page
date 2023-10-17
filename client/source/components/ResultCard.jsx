@@ -64,9 +64,8 @@ function ResultCard({ book }) {
       <Text>
         By: {googleBook?.authors[0]}
       </Text>
-      <Text>
-        Ages: {book.age_range}
-      </Text>
+      {book.age_range &&
+        <Text>Ages: {book.age_range}</Text>}
       <Text>
         Published: {googleBook?.publishedDate.substring(0,4)}
       </Text>
