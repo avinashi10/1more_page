@@ -2,9 +2,20 @@
 const functions = require('firebase-functions');
 const axios = require('axios');
 
-const API_URL = functions.config().api.url;
-const API_TOKEN = functions.config().api.token;
-const GOOGLE_LIB_ID = functions.config().googlelib.id;
+// LOCAL IMPORTS
+require('dotenv').config({ path: '/Users/archaareads/Documents/Code/MVP/1more_page/.env' });
+
+const API_URL = process.env.NODE_ENV !== 'production'
+  ? process.env.API_URL
+  : functions.config().api.url;
+
+const API_TOKEN = process.env.NODE_ENV !== 'production'
+  ? process.env.API_TOKEN
+  : functions.config().api.token;
+
+const GOOGLE_LIB_ID = process.env.NODE_ENV !== 'production'
+  ? process.env.GOOGLE_LIB_ID
+  : functions.config().googlelib.id;
 
 module.exports = {
   getFromBookshelf: ((shelfId) => {

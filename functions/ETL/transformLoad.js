@@ -36,9 +36,31 @@ const transformLoad = (shelfId) => {
 // const shelfIds = [1003, 1002, 1001, 1004, 1006, 1005];
 // shelfIds.forEach((id) => transformLoad(id));
 
-transformLoad(1001);
-transformLoad(1002);
-transformLoad(1003);
-transformLoad(1004);
-transformLoad(1005);
-transformLoad(1006);
+// transformLoad(1001);
+// transformLoad(1002);
+// transformLoad(1003);
+// transformLoad(1004);
+// transformLoad(1005);
+// transformLoad(1006);
+
+async function main() {
+  const shelfIds = [1001, 1002, 1003, 1004, 1005, 1006];
+
+  // eslint-disable-next-line no-restricted-syntax
+  for (const id of shelfIds) {
+    try {
+      // eslint-disable-next-line no-await-in-loop
+      await transformLoad(id);
+      console.log(`Data load for shelfId ${id} completed successfully.`);
+    } catch (error) {
+      console.error(`Error executing data load for shelfId ${id}:`, error);
+      break;
+    }
+  }
+}
+
+main().then(() => {
+  console.log('All tasks completed.');
+}).catch((error) => {
+  console.error('An error occurred:', error);
+});
