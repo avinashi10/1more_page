@@ -1,0 +1,1167 @@
+[debug] [2023-10-17T17:01:23.271Z] ----------------------------------------------------------------------
+[debug] [2023-10-17T17:01:23.286Z] Command:       /Users/archaareads/.nvm/versions/node/v18.18.0/bin/node /Users/archaareads/.nvm/versions/node/v18.18.0/bin/firebase emulators:start --only functions
+[debug] [2023-10-17T17:01:23.287Z] CLI Version:   12.7.0
+[debug] [2023-10-17T17:01:23.288Z] Platform:      darwin
+[debug] [2023-10-17T17:01:23.288Z] Node Version:  v18.18.0
+[debug] [2023-10-17T17:01:23.322Z] Time:          Tue Oct 17 2023 10:01:23 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-10-17T17:01:23.323Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-17T17:01:23.485Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-17T17:01:23.486Z] > authorizing via signed-in user (archaacodes@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2023-10-17T17:01:24.552Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-10-17T17:01:24.555Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-10-17T17:01:24.582Z] [hub] writing locator at /var/folders/2k/tqk2ks3d1s13zjbs1y30s5mc0000gp/T/hub-one-more-page.json
+[debug] [2023-10-17T17:01:25.100Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-10-17T17:01:25.100Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-10-17T17:01:25.101Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2023-10-17T17:01:25.105Z] defaultcredentials: writing to file /Users/archaareads/.config/firebase/archaacodes_gmail_com_application_default_credentials.json
+[debug] [2023-10-17T17:01:25.137Z] Setting GAC to /Users/archaareads/.config/firebase/archaacodes_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/archaareads/.config/firebase/archaacodes_gmail_com_application_default_credentials.json"}}
+[debug] [2023-10-17T17:01:25.145Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/one-more-page/adminSdkConfig [none]
+[debug] [2023-10-17T17:01:25.840Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/one-more-page/adminSdkConfig 200
+[debug] [2023-10-17T17:01:25.840Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/one-more-page/adminSdkConfig {"projectId":"one-more-page","storageBucket":"one-more-page.appspot.com"}
+[debug] [2023-10-17T17:01:25.879Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-10-17T17:01:25.879Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-10-17T17:01:25.880Z] Starting Emulator UI with command {"binary":"node","args":["/Users/archaareads/.cache/firebase/emulators/ui-v1.11.7/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/archaareads/.cache/firebase/emulators/ui-v1.11.7/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-10-17T17:01:26.110Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-10-17T17:01:26.111Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/archaareads/Documents/Code/MVP/1more_page/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/archaareads/Documents/Code/MVP/1more_page/functions\" for Cloud Functions..."}}
+[debug] [2023-10-17T17:01:26.153Z] Validating nodejs source
+[debug] [2023-10-17T17:01:27.639Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T17:01:27.639Z] Building nodejs source
+[debug] [2023-10-17T17:01:27.640Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T17:01:27.645Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T17:01:27.655Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8570
+
+[debug] [2023-10-17T17:01:29.498Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] ✔  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/one-more-page/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/one-more-page/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2023-10-17T17:02:27.004Z] [work-queue] {"queuedWork":["/one-more-page/us-central1/api/books-2023-10-17T17:02:27.004Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-10-17T17:02:27.006Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/one-more-page/us-central1/api/books-2023-10-17T17:02:27.004Z"],"workRunningCount":1}
+[debug] [2023-10-17T17:02:27.007Z] Accepted request GET /one-more-page/us-central1/api/books --> us-central1-api
+[debug] [2023-10-17T17:02:27.009Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-10-17T17:02:27.012Z] [functions] Got req.url=/one-more-page/us-central1/api/books, mapping to path=/books {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/one-more-page/us-central1/api/books, mapping to path=/books"}}
+[debug] [2023-10-17T17:02:27.026Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2023-10-17T17:02:27.028Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2023-10-17T17:02:30.684Z] [runtime-status] [16766] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16766] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-10-17T17:02:30.686Z] [runtime-status] [16766] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16766] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-10-17T17:02:30.687Z] [runtime-status] [16766] Found local functions config: /Users/archaareads/Documents/Code/MVP/1more_page/functions/.runtimeconfig.json {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16766] Found local functions config: /Users/archaareads/Documents/Code/MVP/1more_page/functions/.runtimeconfig.json"}}
+[debug] [2023-10-17T17:02:30.689Z] [runtime-status] [16766] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16766] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-10-17T17:02:30.690Z] [runtime-status] [16766] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16766] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-10-17T17:02:31.434Z] [runtime-status] [16766] Checked functions.config() {"config":{"mongodb":{"uri":"mongodb+srv://bibliophile:RyM4zfWWHaeE9hNY@omp-prod.ipv3qu5.mongodb.net/?retryWrites=true&w=majority&ssl=true&authSource=admin&authMechanism=SCRAM-SHA-1"}}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16766] Checked functions.config() {\"config\":{\"mongodb\":{\"uri\":\"mongodb+srv://bibliophile:RyM4zfWWHaeE9hNY@omp-prod.ipv3qu5.mongodb.net/?retryWrites=true&w=majority&ssl=true&authSource=admin&authMechanism=SCRAM-SHA-1\"}}}"}}
+[debug] [2023-10-17T17:02:31.435Z] [runtime-status] [16766] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16766] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2023-10-17T17:02:31.435Z] [runtime-status] [16766] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16766] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-10-17T17:02:31.435Z] [runtime-status] [16766] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16766] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-10-17T17:02:31.442Z] [runtime-status] [16766] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16766] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-10-17T17:02:31.442Z] [runtime-status] [16766] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.0","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16766] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2023-10-17T17:02:32.592Z] [runtime-status] [16766] Functions runtime initialized. {"cwd":"/Users/archaareads/Documents/Code/MVP/1more_page/functions","node_version":"18.18.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16766] Functions runtime initialized. {\"cwd\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions\",\"node_version\":\"18.18.0\"}"}}
+[debug] [2023-10-17T17:02:32.593Z] [runtime-status] [16766] Listening to port: /var/folders/2k/tqk2ks3d1s13zjbs1y30s5mc0000gp/T/fire_emu_439aaa6a5ce7ecf2.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16766] Listening to port: /var/folders/2k/tqk2ks3d1s13zjbs1y30s5mc0000gp/T/fire_emu_439aaa6a5ce7ecf2.sock"}}
+[debug] [2023-10-17T17:02:32.640Z] [worker-us-central1-api-b3e7e311-da8f-4e61-8f98-01f8dcacd773]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b3e7e311-da8f-4e61-8f98-01f8dcacd773]: IDLE"}}
+[debug] [2023-10-17T17:02:32.640Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-10-17T17:02:32.641Z] [worker-us-central1-api-b3e7e311-da8f-4e61-8f98-01f8dcacd773]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b3e7e311-da8f-4e61-8f98-01f8dcacd773]: BUSY"}}
+[info] >  Connected to MongoDB Atlas {"user":"Connected to MongoDB Atlas","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Connected to MongoDB Atlas"}}
+[debug] [2023-10-17T17:02:33.714Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 1073.71225ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 1073.71225ms"}}
+[debug] [2023-10-17T17:02:33.716Z] [worker-us-central1-api-b3e7e311-da8f-4e61-8f98-01f8dcacd773]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b3e7e311-da8f-4e61-8f98-01f8dcacd773]: IDLE"}}
+[debug] [2023-10-17T17:02:33.716Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-10-17T17:02:33.716Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-10-17T17:02:33.717Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-10-17T17:43:00.505Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/package.json changed, reloading triggers"}}
+[debug] [2023-10-17T17:43:00.882Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/package-lock.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/package-lock.json changed, reloading triggers"}}
+[debug] [2023-10-17T17:43:01.886Z] Validating nodejs source
+[debug] [2023-10-17T17:43:02.622Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T17:43:02.623Z] Building nodejs source
+[debug] [2023-10-17T17:43:02.623Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T17:43:02.626Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T17:43:02.628Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8036
+
+[debug] [2023-10-17T17:43:04.218Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T17:43:14.236Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2023-10-17T17:43:14.236Z] [worker-us-central1-api-b3e7e311-da8f-4e61-8f98-01f8dcacd773]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b3e7e311-da8f-4e61-8f98-01f8dcacd773]: FINISHING"}}
+[debug] [2023-10-17T17:43:14.258Z] [worker-us-central1-api-b3e7e311-da8f-4e61-8f98-01f8dcacd773]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b3e7e311-da8f-4e61-8f98-01f8dcacd773]: exited"}}
+[debug] [2023-10-17T17:43:14.259Z] [worker-us-central1-api-b3e7e311-da8f-4e61-8f98-01f8dcacd773]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-b3e7e311-da8f-4e61-8f98-01f8dcacd773]: FINISHED"}}
+[debug] [2023-10-17T17:43:20.730Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/package.json changed, reloading triggers"}}
+[debug] [2023-10-17T17:43:21.734Z] Validating nodejs source
+[debug] [2023-10-17T17:43:22.391Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T17:43:22.391Z] Building nodejs source
+[debug] [2023-10-17T17:43:22.391Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T17:43:22.392Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T17:43:22.393Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8576
+
+[debug] [2023-10-17T17:43:23.070Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[debug] [2023-10-17T17:43:32.678Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/extract.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/extract.js changed, reloading triggers"}}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T17:43:33.680Z] Validating nodejs source
+[debug] [2023-10-17T17:43:34.692Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T17:43:34.692Z] Building nodejs source
+[debug] [2023-10-17T17:43:34.692Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T17:43:34.694Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T17:43:34.695Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8730
+
+[debug] [2023-10-17T17:43:35.393Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T17:43:46.390Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/package.json changed, reloading triggers"}}
+[debug] [2023-10-17T17:43:46.749Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/package-lock.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/package-lock.json changed, reloading triggers"}}
+[debug] [2023-10-17T17:43:47.751Z] Validating nodejs source
+[debug] [2023-10-17T17:43:48.430Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T17:43:48.431Z] Building nodejs source
+[debug] [2023-10-17T17:43:48.431Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T17:43:48.432Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T17:43:48.434Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8743
+
+[debug] [2023-10-17T17:43:49.866Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T17:44:26.738Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/extract.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/extract.js changed, reloading triggers"}}
+[debug] [2023-10-17T17:44:27.740Z] Validating nodejs source
+[debug] [2023-10-17T17:44:28.410Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T17:44:28.410Z] Building nodejs source
+[debug] [2023-10-17T17:44:28.410Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T17:44:28.412Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T17:44:28.413Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8288
+
+[debug] [2023-10-17T17:44:30.002Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[debug] [2023-10-17T17:44:38.543Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/extract.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/extract.js changed, reloading triggers"}}
+[debug] [2023-10-17T17:44:39.543Z] Validating nodejs source
+[debug] [2023-10-17T17:44:40.354Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T17:44:40.354Z] Building nodejs source
+[debug] [2023-10-17T17:44:40.354Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T17:44:40.355Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T17:44:40.356Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] Serving at port 8129
+
+[debug] [2023-10-17T17:44:41.622Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T17:48:37.048Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/extract.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/extract.js changed, reloading triggers"}}
+[debug] [2023-10-17T17:48:38.051Z] Validating nodejs source
+[debug] [2023-10-17T17:48:39.247Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T17:48:39.248Z] Building nodejs source
+[debug] [2023-10-17T17:48:39.248Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T17:48:39.248Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T17:48:39.249Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8255
+
+[debug] [2023-10-17T17:48:40.593Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T17:50:32.172Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/db.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/db.js changed, reloading triggers"}}
+[debug] [2023-10-17T17:50:33.174Z] Validating nodejs source
+[debug] [2023-10-17T17:50:33.824Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T17:50:33.824Z] Building nodejs source
+[debug] [2023-10-17T17:50:33.824Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T17:50:33.825Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T17:50:33.827Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8234
+
+[debug] [2023-10-17T17:50:34.372Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[error] Error connecting to MongoDB Atlas: MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.createClient (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)
+    at NativeConnection.openUri (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/connection.js:755:34)
+    at Mongoose.connect (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/index.js:404:15)
+    at Object.<anonymous> (/Users/archaareads/Documents/Code/MVP/1more_page/functions/db.js:9:10)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+
+[error] node:internal/process/promises:288
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.createClient (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)
+    at NativeConnection.openUri (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/connection.js:755:34)
+    at Mongoose.connect (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/index.js:404:15)
+    at Object.<anonymous> (/Users/archaareads/Documents/Code/MVP/1more_page/functions/db.js:9:10)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+
+Node.js v18.18.0
+
+[debug] [2023-10-17T17:50:34.382Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8234/__/quitquitquit failed, reason: read ECONNRESET {"message":"request to http://localhost:8234/__/quitquitquit failed, reason: read ECONNRESET","type":"system","errno":"ECONNRESET","code":"ECONNRESET"}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T17:50:45.582Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/db.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/db.js changed, reloading triggers"}}
+[debug] [2023-10-17T17:50:46.583Z] Validating nodejs source
+[debug] [2023-10-17T17:50:47.233Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T17:50:47.234Z] Building nodejs source
+[debug] [2023-10-17T17:50:47.234Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T17:50:47.234Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T17:50:47.236Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8262
+
+[debug] [2023-10-17T17:50:47.800Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[error] Error connecting to MongoDB Atlas: MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.createClient (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)
+    at NativeConnection.openUri (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/connection.js:755:34)
+    at Mongoose.connect (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/index.js:404:15)
+    at Object.<anonymous> (/Users/archaareads/Documents/Code/MVP/1more_page/functions/db.js:10:10)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+
+[error] node:internal/process/promises:288
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.createClient (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)
+    at NativeConnection.openUri (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/connection.js:755:34)
+    at Mongoose.connect (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/index.js:404:15)
+    at Object.<anonymous> (/Users/archaareads/Documents/Code/MVP/1more_page/functions/db.js:10:10)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+
+Node.js v18.18.0
+
+[debug] [2023-10-17T17:50:47.810Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8262/__/quitquitquit failed, reason: read ECONNRESET {"message":"request to http://localhost:8262/__/quitquitquit failed, reason: read ECONNRESET","type":"system","errno":"ECONNRESET","code":"ECONNRESET"}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T17:52:35.628Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/extract.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/extract.js changed, reloading triggers"}}
+[debug] [2023-10-17T17:52:36.632Z] Validating nodejs source
+[debug] [2023-10-17T17:52:37.719Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T17:52:37.720Z] Building nodejs source
+[debug] [2023-10-17T17:52:37.720Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T17:52:37.721Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T17:52:37.723Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8058
+
+[debug] [2023-10-17T17:52:39.162Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[error] Error connecting to MongoDB Atlas: MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.createClient (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)
+    at NativeConnection.openUri (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/connection.js:755:34)
+    at Mongoose.connect (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/index.js:404:15)
+    at Object.<anonymous> (/Users/archaareads/Documents/Code/MVP/1more_page/functions/db.js:10:10)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+
+[error] node:internal/process/promises:288
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.createClient (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)
+    at NativeConnection.openUri (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/connection.js:755:34)
+    at Mongoose.connect (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/index.js:404:15)
+    at Object.<anonymous> (/Users/archaareads/Documents/Code/MVP/1more_page/functions/db.js:10:10)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+
+Node.js v18.18.0
+
+[debug] [2023-10-17T17:52:39.177Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8058/__/quitquitquit failed, reason: read ECONNRESET {"message":"request to http://localhost:8058/__/quitquitquit failed, reason: read ECONNRESET","type":"system","errno":"ECONNRESET","code":"ECONNRESET"}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T17:53:28.697Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/extract.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/extract.js changed, reloading triggers"}}
+[debug] [2023-10-17T17:53:29.699Z] Validating nodejs source
+[debug] [2023-10-17T17:53:30.451Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T17:53:30.451Z] Building nodejs source
+[debug] [2023-10-17T17:53:30.451Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T17:53:30.452Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T17:53:30.454Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8211
+
+[debug] [2023-10-17T17:53:31.759Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[error] Error connecting to MongoDB Atlas: MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.createClient (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)
+    at NativeConnection.openUri (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/connection.js:755:34)
+    at Mongoose.connect (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/index.js:404:15)
+    at Object.<anonymous> (/Users/archaareads/Documents/Code/MVP/1more_page/functions/db.js:10:10)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+
+[error] node:internal/process/promises:288
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.createClient (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:206:11)
+    at NativeConnection.openUri (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/connection.js:755:34)
+    at Mongoose.connect (/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/mongoose/lib/index.js:404:15)
+    at Object.<anonymous> (/Users/archaareads/Documents/Code/MVP/1more_page/functions/db.js:10:10)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+
+Node.js v18.18.0
+
+[debug] [2023-10-17T17:53:31.773Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8211/__/quitquitquit failed, reason: read ECONNRESET {"message":"request to http://localhost:8211/__/quitquitquit failed, reason: read ECONNRESET","type":"system","errno":"ECONNRESET","code":"ECONNRESET"}
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T18:04:02.124Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers"}}
+[debug] [2023-10-17T18:04:03.136Z] Validating nodejs source
+[debug] [2023-10-17T18:04:04.027Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T18:04:04.028Z] Building nodejs source
+[debug] [2023-10-17T18:04:04.028Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T18:04:04.033Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T18:04:04.036Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8391
+
+[debug] [2023-10-17T18:04:06.364Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T18:04:24.931Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers"}}
+[debug] [2023-10-17T18:04:25.933Z] Validating nodejs source
+[debug] [2023-10-17T18:04:26.716Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T18:04:26.716Z] Building nodejs source
+[debug] [2023-10-17T18:04:26.716Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T18:04:26.717Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T18:04:26.718Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8320
+
+[debug] [2023-10-17T18:04:27.392Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T18:07:18.439Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers"}}
+[debug] [2023-10-17T18:07:19.444Z] Validating nodejs source
+[debug] [2023-10-17T18:07:20.606Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T18:07:20.606Z] Building nodejs source
+[debug] [2023-10-17T18:07:20.606Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T18:07:20.607Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T18:07:20.609Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8350
+
+[debug] [2023-10-17T18:07:22.230Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T18:07:38.055Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers"}}
+[debug] [2023-10-17T18:07:39.059Z] Validating nodejs source
+[debug] [2023-10-17T18:07:40.160Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T18:07:40.161Z] Building nodejs source
+[debug] [2023-10-17T18:07:40.161Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T18:07:40.161Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T18:07:40.162Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8610
+
+[debug] [2023-10-17T18:07:41.564Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T18:08:24.927Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers"}}
+[debug] [2023-10-17T18:08:25.930Z] Validating nodejs source
+[debug] [2023-10-17T18:08:27.089Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T18:08:27.089Z] Building nodejs source
+[debug] [2023-10-17T18:08:27.089Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T18:08:27.090Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T18:08:27.091Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8874
+
+[debug] [2023-10-17T18:08:28.635Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T18:08:56.731Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers"}}
+[debug] [2023-10-17T18:08:57.732Z] Validating nodejs source
+[debug] [2023-10-17T18:08:58.448Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T18:08:58.448Z] Building nodejs source
+[debug] [2023-10-17T18:08:58.448Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T18:08:58.448Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T18:08:58.449Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8241
+
+[debug] [2023-10-17T18:08:59.213Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T18:14:06.713Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers"}}
+[debug] [2023-10-17T18:14:07.715Z] Validating nodejs source
+[debug] [2023-10-17T18:14:08.953Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T18:14:08.954Z] Building nodejs source
+[debug] [2023-10-17T18:14:08.954Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T18:14:08.955Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T18:14:08.956Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8558
+
+[debug] [2023-10-17T18:14:10.359Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T18:15:23.084Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/extract.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/extract.js changed, reloading triggers"}}
+[debug] [2023-10-17T18:15:24.087Z] Validating nodejs source
+[debug] [2023-10-17T18:15:25.009Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T18:15:25.010Z] Building nodejs source
+[debug] [2023-10-17T18:15:25.010Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T18:15:25.012Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T18:15:25.013Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8455
+
+[debug] [2023-10-17T18:15:26.225Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T18:15:53.630Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/ETL/transformLoad.js changed, reloading triggers"}}
+[debug] [2023-10-17T18:15:54.631Z] Validating nodejs source
+[debug] [2023-10-17T18:15:55.389Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-17T18:15:55.389Z] Building nodejs source
+[debug] [2023-10-17T18:15:55.389Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-17T18:15:55.390Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-17T18:15:55.391Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8624
+
+[debug] [2023-10-17T18:15:56.874Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-10-17T18:17:01.896Z] [work-queue] {"queuedWork":["/one-more-page/us-central1/api/books-2023-10-17T18:17:01.895Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-10-17T18:17:01.898Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/one-more-page/us-central1/api/books-2023-10-17T18:17:01.895Z"],"workRunningCount":1}
+[debug] [2023-10-17T18:17:01.898Z] Accepted request GET /one-more-page/us-central1/api/books --> us-central1-api
+[debug] [2023-10-17T18:17:01.901Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-10-17T18:17:01.902Z] [functions] Got req.url=/one-more-page/us-central1/api/books, mapping to path=/books {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/one-more-page/us-central1/api/books, mapping to path=/books"}}
+[debug] [2023-10-17T18:17:01.903Z] [worker-pool] Cleaned up workers for us-central1-api: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-api: 1 --> 0"}}
+[debug] [2023-10-17T18:17:01.913Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2023-10-17T18:17:01.914Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2023-10-17T18:17:04.583Z] [runtime-status] [18226] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [18226] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-10-17T18:17:04.585Z] [runtime-status] [18226] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [18226] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-10-17T18:17:04.587Z] [runtime-status] [18226] Found local functions config: /Users/archaareads/Documents/Code/MVP/1more_page/functions/.runtimeconfig.json {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [18226] Found local functions config: /Users/archaareads/Documents/Code/MVP/1more_page/functions/.runtimeconfig.json"}}
+[debug] [2023-10-17T18:17:04.588Z] [runtime-status] [18226] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [18226] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-10-17T18:17:04.589Z] [runtime-status] [18226] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [18226] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-10-17T18:17:05.242Z] [runtime-status] [18226] Checked functions.config() {"config":{"mongodb":{"uri":"mongodb+srv://bibliophile:RyM4zfWWHaeE9hNY@omp-prod.ipv3qu5.mongodb.net/?retryWrites=true&w=majority&ssl=true&authSource=admin&authMechanism=SCRAM-SHA-1"}}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [18226] Checked functions.config() {\"config\":{\"mongodb\":{\"uri\":\"mongodb+srv://bibliophile:RyM4zfWWHaeE9hNY@omp-prod.ipv3qu5.mongodb.net/?retryWrites=true&w=majority&ssl=true&authSource=admin&authMechanism=SCRAM-SHA-1\"}}}"}}
+[debug] [2023-10-17T18:17:05.243Z] [runtime-status] [18226] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [18226] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2023-10-17T18:17:05.244Z] [runtime-status] [18226] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [18226] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-10-17T18:17:05.247Z] [runtime-status] [18226] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [18226] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-10-17T18:17:05.252Z] [runtime-status] [18226] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [18226] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-10-17T18:17:05.252Z] [runtime-status] [18226] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.0","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [18226] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2023-10-17T18:17:06.162Z] [runtime-status] [18226] Functions runtime initialized. {"cwd":"/Users/archaareads/Documents/Code/MVP/1more_page/functions","node_version":"18.18.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [18226] Functions runtime initialized. {\"cwd\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions\",\"node_version\":\"18.18.0\"}"}}
+[debug] [2023-10-17T18:17:06.162Z] [runtime-status] [18226] Listening to port: /var/folders/2k/tqk2ks3d1s13zjbs1y30s5mc0000gp/T/fire_emu_f281af7e26fd2f8d.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [18226] Listening to port: /var/folders/2k/tqk2ks3d1s13zjbs1y30s5mc0000gp/T/fire_emu_f281af7e26fd2f8d.sock"}}
+[debug] [2023-10-17T18:17:06.178Z] [worker-us-central1-api-9d8d492c-693a-4cb2-a9e6-f56e5d2b1383]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-9d8d492c-693a-4cb2-a9e6-f56e5d2b1383]: IDLE"}}
+[debug] [2023-10-17T18:17:06.178Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-10-17T18:17:06.179Z] [worker-us-central1-api-9d8d492c-693a-4cb2-a9e6-f56e5d2b1383]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-9d8d492c-693a-4cb2-a9e6-f56e5d2b1383]: BUSY"}}
+[info] >  Connected to MongoDB Atlas {"user":"Connected to MongoDB Atlas","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Connected to MongoDB Atlas"}}
+[debug] [2023-10-17T18:17:07.187Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 1008.660599ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 1008.660599ms"}}
+[debug] [2023-10-17T18:17:07.188Z] [worker-us-central1-api-9d8d492c-693a-4cb2-a9e6-f56e5d2b1383]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-9d8d492c-693a-4cb2-a9e6-f56e5d2b1383]: IDLE"}}
+[debug] [2023-10-17T18:17:07.189Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-10-17T18:17:07.189Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-10-17T18:17:07.190Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
