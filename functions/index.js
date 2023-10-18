@@ -9,8 +9,7 @@ const router = require('./routes.js');
 
 // Check if running in Firebase Emulator
 const isEmulator = functions.config().env && functions.config().env.dev === 'true';
-
-console.log('Is Emulator:', isEmulator);
+// console.log('isEmulator backend:', isEmulator);
 
 // Conditionally set frontendURL based on the environment
 const frontendURL = isEmulator

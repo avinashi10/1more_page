@@ -1,0 +1,188 @@
+[debug] [2023-10-18T17:16:06.117Z] ----------------------------------------------------------------------
+[debug] [2023-10-18T17:16:06.120Z] Command:       /Users/archaareads/.nvm/versions/node/v18.18.0/bin/node /Users/archaareads/.nvm/versions/node/v18.18.0/bin/firebase emulators:start --only functions,hosting
+[debug] [2023-10-18T17:16:06.121Z] CLI Version:   12.7.0
+[debug] [2023-10-18T17:16:06.121Z] Platform:      darwin
+[debug] [2023-10-18T17:16:06.122Z] Node Version:  v18.18.0
+[debug] [2023-10-18T17:16:06.139Z] Time:          Wed Oct 18 2023 10:16:06 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-10-18T17:16:06.139Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-18T17:16:06.239Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-18T17:16:06.240Z] > authorizing via signed-in user (archaacodes@gmail.com)
+[info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
+[debug] [2023-10-18T17:16:06.762Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-10-18T17:16:06.762Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-10-18T17:16:06.763Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-10-18T17:16:06.774Z] [hub] writing locator at /var/folders/2k/tqk2ks3d1s13zjbs1y30s5mc0000gp/T/hub-one-more-page.json
+[debug] [2023-10-18T17:16:07.044Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-10-18T17:16:07.044Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-10-18T17:16:07.044Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub, storage\u001b[22m"}}
+[debug] [2023-10-18T17:16:07.046Z] defaultcredentials: writing to file /Users/archaareads/.config/firebase/archaacodes_gmail_com_application_default_credentials.json
+[debug] [2023-10-18T17:16:07.048Z] Setting GAC to /Users/archaareads/.config/firebase/archaacodes_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/archaareads/.config/firebase/archaacodes_gmail_com_application_default_credentials.json"}}
+[debug] [2023-10-18T17:16:07.051Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/one-more-page/adminSdkConfig [none]
+[debug] [2023-10-18T17:16:07.633Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/one-more-page/adminSdkConfig 200
+[debug] [2023-10-18T17:16:07.634Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/one-more-page/adminSdkConfig {"projectId":"one-more-page","storageBucket":"one-more-page.appspot.com"}
+[debug] [2023-10-18T17:16:07.681Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/one-more-page/sites 
+[debug] [2023-10-18T17:16:08.237Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/one-more-page/sites 200
+[debug] [2023-10-18T17:16:08.238Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/one-more-page/sites {"sites":[{"name":"projects/one-more-page/sites/one-more-page","defaultUrl":"https://one-more-page.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-10-18T17:16:08.238Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/one-more-page/webApps/-/config [none]
+[debug] [2023-10-18T17:16:08.642Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/one-more-page/webApps/-/config 200
+[debug] [2023-10-18T17:16:08.642Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/one-more-page/webApps/-/config {"projectId":"one-more-page","storageBucket":"one-more-page.appspot.com","apiKey":"AIzaSyAk0JJKKTYoft7tudNFq2zHP0W8d2yXEtM","authDomain":"one-more-page.firebaseapp.com","messagingSenderId":"507718610679"}
+[debug] [2023-10-18T17:16:08.666Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/one-more-page [none]
+[debug] [2023-10-18T17:16:08.848Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/one-more-page 200
+[debug] [2023-10-18T17:16:08.848Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/one-more-page {"projectId":"one-more-page","projectNumber":"507718610679","displayName":"One More Page","name":"projects/one-more-page","resources":{"hostingSite":"one-more-page"},"state":"ACTIVE","etag":"1_e4c2abfc-68af-4f45-9083-01501f367bcc"}
+[info] i  hosting[one-more-page]: Serving hosting files from: client/dist {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mclient/dist\u001b[22m"}}
+[info] ✔  hosting[one-more-page]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2023-10-18T17:16:08.958Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-10-18T17:16:08.959Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-10-18T17:16:08.959Z] Starting Emulator UI with command {"binary":"node","args":["/Users/archaareads/.cache/firebase/emulators/ui-v1.11.7/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/archaareads/.cache/firebase/emulators/ui-v1.11.7/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-10-18T17:16:09.121Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-10-18T17:16:09.121Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/archaareads/Documents/Code/MVP/1more_page/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/archaareads/Documents/Code/MVP/1more_page/functions\" for Cloud Functions..."}}
+[debug] [2023-10-18T17:16:09.230Z] Validating nodejs source
+[debug] [2023-10-18T17:16:10.329Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-18T17:16:10.329Z] Building nodejs source
+[debug] [2023-10-18T17:16:10.330Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-18T17:16:10.335Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-18T17:16:10.341Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8928
+
+[info] isEmulator backend: true
+
+[debug] [2023-10-18T17:16:12.506Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] Connected to MongoDB Atlas
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] ✔  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/one-more-page/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/one-more-page/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Hosting   │ 127.0.0.1:5000 │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[info] i  hosting: 127.0.0.1 - - [18/Oct/2023:17:16:29 +0000] "GET / HTTP/1.1" 200 692 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [18/Oct/2023:17:16:29 +0000] \"GET / HTTP/1.1\" 200 692 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [18/Oct/2023:17:16:29 +0000] "GET /styles.css HTTP/1.1" 200 87 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [18/Oct/2023:17:16:29 +0000] \"GET /styles.css HTTP/1.1\" 200 87 \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [18/Oct/2023:17:16:29 +0000] "GET /bundle.js HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [18/Oct/2023:17:16:29 +0000] \"GET /bundle.js HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [18/Oct/2023:17:16:30 +0000] "GET /bundle.js.map HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [18/Oct/2023:17:16:30 +0000] \"GET /bundle.js.map HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36\""}}
+[debug] [2023-10-18T17:16:31.701Z] [work-queue] {"queuedWork":["/one-more-page/us-central1/api/books-2023-10-18T17:16:31.701Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-10-18T17:16:31.701Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/one-more-page/us-central1/api/books-2023-10-18T17:16:31.701Z"],"workRunningCount":1}
+[debug] [2023-10-18T17:16:31.702Z] Accepted request GET /one-more-page/us-central1/api/books --> us-central1-api
+[debug] [2023-10-18T17:16:31.702Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-10-18T17:16:31.703Z] [functions] Got req.url=/one-more-page/us-central1/api/books, mapping to path=/books {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/one-more-page/us-central1/api/books, mapping to path=/books"}}
+[debug] [2023-10-18T17:16:31.716Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2023-10-18T17:16:31.717Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[info] i  hosting: 127.0.0.1 - - [18/Oct/2023:17:16:31 +0000] "GET /6b669e47eb284874b4f3.png HTTP/1.1" 200 40460 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [18/Oct/2023:17:16:31 +0000] \"GET /6b669e47eb284874b4f3.png HTTP/1.1\" 200 40460 \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [18/Oct/2023:17:16:31 +0000] "GET /d2ceb55d6f8a57da608a.png HTTP/1.1" 200 1364446 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [18/Oct/2023:17:16:31 +0000] \"GET /d2ceb55d6f8a57da608a.png HTTP/1.1\" 200 1364446 \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [18/Oct/2023:17:16:33 +0000] "GET /favicon.ico HTTP/1.1" 200 692 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [18/Oct/2023:17:16:33 +0000] \"GET /favicon.ico HTTP/1.1\" 200 692 \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [18/Oct/2023:17:16:33 +0000] "GET /d2ceb55d6f8a57da608a.png HTTP/1.1" 200 1364446 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [18/Oct/2023:17:16:33 +0000] \"GET /d2ceb55d6f8a57da608a.png HTTP/1.1\" 200 1364446 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36\""}}
+[debug] [2023-10-18T17:16:34.293Z] [runtime-status] [31926] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [31926] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-10-18T17:16:34.294Z] [runtime-status] [31926] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [31926] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-10-18T17:16:34.296Z] [runtime-status] [31926] Found local functions config: /Users/archaareads/Documents/Code/MVP/1more_page/functions/.runtimeconfig.json {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [31926] Found local functions config: /Users/archaareads/Documents/Code/MVP/1more_page/functions/.runtimeconfig.json"}}
+[debug] [2023-10-18T17:16:34.296Z] [runtime-status] [31926] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [31926] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-10-18T17:16:34.297Z] [runtime-status] [31926] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [31926] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-10-18T17:16:34.877Z] [runtime-status] [31926] Checked functions.config() {"config":{"api":{"token":"AIzaSyBzu1ILX3_H7tqbI-dyFfobH4p1LCNlB8Y","url":"https://www.googleapis.com/books/v1"},"googlelib":{"id":"104302926151219246194"},"mongodb":{"uri":"mongodb+srv://bibliophile:RyM4zfWWHaeE9hNY@omp-prod.ipv3qu5.mongodb.net/?retryWrites=true&w=majority&authMechanism=SCRAM-SHA-1"},"env":{"dev":"true"}}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [31926] Checked functions.config() {\"config\":{\"api\":{\"token\":\"AIzaSyBzu1ILX3_H7tqbI-dyFfobH4p1LCNlB8Y\",\"url\":\"https://www.googleapis.com/books/v1\"},\"googlelib\":{\"id\":\"104302926151219246194\"},\"mongodb\":{\"uri\":\"mongodb+srv://bibliophile:RyM4zfWWHaeE9hNY@omp-prod.ipv3qu5.mongodb.net/?retryWrites=true&w=majority&authMechanism=SCRAM-SHA-1\"},\"env\":{\"dev\":\"true\"}}}"}}
+[debug] [2023-10-18T17:16:34.878Z] [runtime-status] [31926] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [31926] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2023-10-18T17:16:34.881Z] [runtime-status] [31926] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [31926] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-10-18T17:16:34.883Z] [runtime-status] [31926] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.0","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [31926] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-10-18T17:16:34.889Z] [runtime-status] [31926] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [31926] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-10-18T17:16:34.891Z] [runtime-status] [31926] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.0","resolution":"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [31926] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.0\",\"resolution\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[info] >  isEmulator backend: true {"user":"isEmulator backend: true","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m isEmulator backend: true"}}
+[debug] [2023-10-18T17:16:35.627Z] [runtime-status] [31926] Functions runtime initialized. {"cwd":"/Users/archaareads/Documents/Code/MVP/1more_page/functions","node_version":"18.18.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [31926] Functions runtime initialized. {\"cwd\":\"/Users/archaareads/Documents/Code/MVP/1more_page/functions\",\"node_version\":\"18.18.0\"}"}}
+[debug] [2023-10-18T17:16:35.628Z] [runtime-status] [31926] Listening to port: /var/folders/2k/tqk2ks3d1s13zjbs1y30s5mc0000gp/T/fire_emu_9e6d12e97cb61156.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [31926] Listening to port: /var/folders/2k/tqk2ks3d1s13zjbs1y30s5mc0000gp/T/fire_emu_9e6d12e97cb61156.sock"}}
+[debug] [2023-10-18T17:16:35.751Z] [worker-us-central1-api-72e78dc6-959b-4807-88f8-e10831a067ec]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-72e78dc6-959b-4807-88f8-e10831a067ec]: IDLE"}}
+[debug] [2023-10-18T17:16:35.751Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-10-18T17:16:35.752Z] [worker-us-central1-api-72e78dc6-959b-4807-88f8-e10831a067ec]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-72e78dc6-959b-4807-88f8-e10831a067ec]: BUSY"}}
+[info] >  Origin: http://localhost:5000 {"user":"Origin: http://localhost:5000","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Origin: http://localhost:5000"}}
+[info] >  Frontend URL: http://localhost:5000 {"user":"Frontend URL: http://localhost:5000","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Frontend URL: http://localhost:5000"}}
+[info] >  Connected to MongoDB Atlas {"user":"Connected to MongoDB Atlas","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Connected to MongoDB Atlas"}}
+[debug] [2023-10-18T17:16:36.653Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 901.620073ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 901.620073ms"}}
+[debug] [2023-10-18T17:16:36.654Z] [worker-us-central1-api-72e78dc6-959b-4807-88f8-e10831a067ec]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-72e78dc6-959b-4807-88f8-e10831a067ec]: IDLE"}}
+[debug] [2023-10-18T17:16:36.654Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-10-18T17:16:36.655Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-10-18T17:16:36.655Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-10-18T17:19:40.235Z] File /Users/archaareads/Documents/Code/MVP/1more_page/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/archaareads/Documents/Code/MVP/1more_page/functions/index.js changed, reloading triggers"}}
+[debug] [2023-10-18T17:19:41.239Z] Validating nodejs source
+[debug] [2023-10-18T17:19:42.412Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "firebase-tools": "^12.7.0"
+  },
+  "private": true
+}
+[debug] [2023-10-18T17:19:42.413Z] Building nodejs source
+[debug] [2023-10-18T17:19:42.413Z] Failed to find version of module node: reached end of search path /Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[debug] [2023-10-18T17:19:42.414Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-10-18T17:19:42.416Z] Found firebase-functions binary at '/Users/archaareads/Documents/Code/MVP/1more_page/functions/node_modules/.bin/firebase-functions'

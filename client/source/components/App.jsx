@@ -48,7 +48,10 @@ function App() {
 
   // Determine if running in emulator environment
   const isEmulator = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  // console.log('isEmulator frontend:', isEmulator);
+
   const API_ENDPOINT = isEmulator ? 'http://localhost:5001/one-more-page/us-central1/api/books' : 'https://us-central1-one-more-page.cloudfunctions.net/api/books';
+  // console.log('API Endpoint:', API_ENDPOINT);
 
   // HOOKS
   useEffect(() => {
