@@ -23,8 +23,8 @@ const app = express();
 const corsOptions = {
   // eslint-disable-next-line object-shorthand
   origin: function (origin, callback) {
-    console.log('Origin:', origin);
-    console.log('Frontend URL:', frontendURL);
+    // console.log('Origin:', origin);
+    // console.log('Frontend URL:', frontendURL);
 
     if (frontendURL === origin || !origin) {
       callback(null, true);

@@ -2,18 +2,18 @@
 // eslint-disable-next-line no-unused-vars
 const express = require('express');
 const axios = require('axios');
-// const functions = require('firebase-functions');
+const functions = require('firebase-functions');
 
 // LOCAL IMPORTS
 const model = require('./models.js');
-
-const GOOGLE_API_KEY = 'fix this later';
 
 module.exports = {
   getAll: (req, res) => {
     model.getAllFromDb()
       .then((data) => {
         res.send(data);
+        // const keyTrial = functions.config().api.token;
+        // console.log('Key: ', keyTrial);
       })
       .catch((err) => res.status(404).send(err));
   },
@@ -32,15 +32,10 @@ module.exports = {
       .catch((err) => res.status(404).send(err));
   },
   getGoogleBook: async (req, res) => {
-    const googleBooksId = req.query.id;
-
+    const googleBookId = req.params.id;
     try {
-      const { data } = await axios.get(`https://www.googleapis.com/books/v1/volumes/${googleBooksId}`, {
-        params: {
-          key: GOOGLE_API_KEY,
-        },
-      });
-
+      const GOOGLE_API_KEY = functions.config().api.token;
+      const { data } = await axios.get(`https://www.googleapis.com/books/v1/volumes/${googleBookId}?key=${GOOGLE_API_KEY}`);
       res.json(data);
     } catch (error) {
       console.error(error);

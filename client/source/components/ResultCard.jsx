@@ -7,7 +7,7 @@ import {
 
 // LOCAL IMPORTS
 
-function ResultCard({ book, isAdmin }) {
+function ResultCard({ book, isAdmin, API_ENDPOINT }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   // SET STATE
@@ -15,16 +15,7 @@ function ResultCard({ book, isAdmin }) {
 
   // HOOKS
   useEffect(() => {
-    const config = {
-      method: 'get',
-      maxBodyLength: Infinity,
-      url: `https://www.googleapis.com/books/v1/volumes/${book?.google_books_id}`,
-      headers: {
-        Authorization: 'AIzaSyBzu1ILX3_H7tqbI-dyFfobH4p1LCNlB8Y',
-      },
-    };
-
-    axios(config)
+    axios.get(`${API_ENDPOINT}/getGoogleBook/${book?.google_books_id}`)
       .then(({ data }) => {
         setGoogleBook(data.volumeInfo);
       })

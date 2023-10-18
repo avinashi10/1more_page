@@ -114,6 +114,7 @@ function App() {
         <ResultList
           booklist={booklist}
           isAdmin={isAdmin}
+          API_ENDPOINT={API_ENDPOINT}
         />
       </Flex>
     </Flex>

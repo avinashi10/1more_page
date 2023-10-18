@@ -17,7 +17,7 @@
     "lint": "eslint .",
     "webpack-build": "webpack --watch",
     "emulate-fullstack": "firebase emulators:start --only functions,hosting",
-    "server-dev": "npx nodemon --watch server functions/index.js",
+    "server-dev": "npx nodemon --watch functions functions/index.js",
     "test": "test",
     "install:functions": "cd functions && npm install && cd ..",
     "build": "NODE_ENV=production npx webpack --mode production",
