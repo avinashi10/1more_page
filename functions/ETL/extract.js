@@ -6,17 +6,9 @@ const axios = require('axios');
 // eslint-disable-next-line import/no-extraneous-dependencies
 require('dotenv').config({ path: '/Users/archaareads/Documents/Code/MVP/1more_page/.env' });
 
-const API_URL = process.env.NODE_ENV !== 'production'
-  ? process.env.API_URL
-  : functions.config().api.url;
-
-const API_TOKEN = process.env.NODE_ENV !== 'production'
-  ? process.env.API_TOKEN
-  : functions.config().api.token;
-
-const GOOGLE_LIB_ID = process.env.NODE_ENV !== 'production'
-  ? process.env.GOOGLE_LIB_ID
-  : functions.config().googlelib.id;
+const API_URL = functions.config().api.url;
+const API_TOKEN = functions.config().api.token;
+const GOOGLE_LIB_ID = functions.config().googlelib.id;
 
 module.exports = {
   getFromBookshelf: ((shelfId) => {
