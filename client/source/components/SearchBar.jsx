@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import {
   Button, Flex, FormControl, Input, IconButton, Image, Link, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton,
 } from '@chakra-ui/react';
-import { SearchIcon } from '@chakra-ui/icons';
+import { EditIcon, SearchIcon } from '@chakra-ui/icons';
 
 // LOCAL IMPORTS
 import logo from '../../dist/images/OMPLogo.png';
@@ -11,9 +11,11 @@ import headshot from '../../dist/images/headshot.png';
 
 function SearchBar({ setUserInput }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen: isAdminModalOpen, onOpen: onAdminModalOpen, onClose: onAdminModalClose } = useDisclosure();
 
   // SET STATES
   const [currentInput, setCurrentInput] = useState('');
+  const [adminInput, setAdminInput] = useState('');
 
   // HANDLE EVENTS
   const handleChange = (e) => setCurrentInput(e.target.value);
@@ -21,6 +23,15 @@ function SearchBar({ setUserInput }) {
     e.preventDefault();
     setUserInput(currentInput);
     setCurrentInput('');
+  };
+  const handleAdminInputChange = (e) => setAdminInput(e.target.value);
+  const handleAdminSubmit = (e) => {
+    e.preventDefault();
+    if (adminInput === 'ADMIN_PASSWORD') {
+      setIsAdmin(true);
+    }
+    setAdminInput('');
+    onAdminModalClose();
   };
 
   return (
@@ -68,6 +79,37 @@ function SearchBar({ setUserInput }) {
             {' '}
             <Link href="https://wwww.archaareads.com" isExternal fontWeight="bold" textDecoration="underline">here</Link>
             .
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+
+      <IconButton
+        color="brand.forest_green"
+        variant="outline"
+        aria-label="Search for book by title"
+        type="submit"
+        onClick={onAdminModalOpen}
+        flexShrink={0}
+        icon={<EditIcon />}
+      />
+
+      <Modal isOpen={isAdminModalOpen} onClose={onAdminModalClose}>
+        <ModalOverlay />
+        <ModalContent bg="brand.light">
+          <ModalHeader>Admin Login</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <FormControl onSubmit={handleAdminSubmit}>
+              <Input
+                value={adminInput}
+                onChange={handleAdminInputChange}
+                placeholder="Enter Admin Key"
+                type="password"
+              />
+              <Button type="submit" mt={3}>
+                Login
+              </Button>
+            </FormControl>
           </ModalBody>
         </ModalContent>
       </Modal>

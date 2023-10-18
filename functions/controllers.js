@@ -1,9 +1,13 @@
 // LIBRARY IMPORTS
 // eslint-disable-next-line no-unused-vars
 const express = require('express');
+const axios = require('axios');
+// const functions = require('firebase-functions');
 
 // LOCAL IMPORTS
 const model = require('./models.js');
+
+const GOOGLE_API_KEY = 'fix this later';
 
 module.exports = {
   getAll: (req, res) => {
@@ -26,5 +30,21 @@ module.exports = {
         res.send(data);
       })
       .catch((err) => res.status(404).send(err));
+  },
+  getGoogleBook: async (req, res) => {
+    const googleBooksId = req.query.id;
+
+    try {
+      const { data } = await axios.get(`https://www.googleapis.com/books/v1/volumes/${googleBooksId}`, {
+        params: {
+          key: GOOGLE_API_KEY,
+        },
+      });
+
+      res.json(data);
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Failed to fetch book from Google Books.');
+    }
   },
 };

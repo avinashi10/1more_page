@@ -1,11 +1,15 @@
 // LIBRARY IMPORTS
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { GridItem, Heading, Image, Text, Center } from '@chakra-ui/react';
+import {
+  Center, GridItem, Heading, Image, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, Text, useDisclosure,
+} from '@chakra-ui/react';
 
 // LOCAL IMPORTS
 
-function ResultCard({ book }) {
+function ResultCard({ book, isAdmin }) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   // SET STATE
   const [googleBook, setGoogleBook] = useState(null);
 

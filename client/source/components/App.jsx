@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // LIBRARY IMPORTS
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
@@ -12,6 +13,7 @@ import { formatList, ageList, raceList } from './FilterFeatures/filterValues.js'
 function App() {
   // SET STATES
   const [booklist, setBooklist] = useState([]);
+  const [isAdmin, setIsAdmin] = useState([true]);
   const [userInput, setUserInput] = useState('');
   const [formats, setFormats] = useState(formatList);
   const [ages, setAges] = useState(ageList);
@@ -44,9 +46,13 @@ function App() {
     setRaces(changeCheckedRaces);
   };
 
+  // Determine if running in emulator environment
+  const isEmulator = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  const API_ENDPOINT = isEmulator ? 'http://localhost:5001/one-more-page/us-central1/api/books' : 'https://us-central1-one-more-page.cloudfunctions.net/api/books';
+
   // HOOKS
   useEffect(() => {
-    axios.get('https://us-central1-one-more-page.cloudfunctions.net/api/books')
+    axios.get(API_ENDPOINT)
       .then(({ data }) => {
         setBooklist(data);
         booksRef.current = data;
@@ -95,7 +101,7 @@ function App() {
 
   return (
     <Flex flexDir="column" h="100vh">
-      <SearchBar setUserInput={setUserInput} />
+      <SearchBar setUserInput={setUserInput} isAdmin={isAdmin} setIsAdmin={setIsAdmin} />
       <Flex flex="1" h="100vh" w="100vw">
         <FilterPanel
           handleFormatChecked={handleFormatChecked}
@@ -104,6 +110,7 @@ function App() {
         />
         <ResultList
           booklist={booklist}
+          isAdmin={isAdmin}
         />
       </Flex>
     </Flex>

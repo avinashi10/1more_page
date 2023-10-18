@@ -7,7 +7,15 @@ const cors = require('cors');
 // LOCAL IMPORTS
 const router = require('./routes.js');
 
-const frontendURL = 'https://one-more-page.web.app';
+// Check if running in Firebase Emulator
+const isEmulator = functions.config().env && functions.config().env.dev === 'true';
+
+console.log('Is Emulator:', isEmulator);
+
+// Conditionally set frontendURL based on the environment
+const frontendURL = isEmulator
+  ? 'http://localhost:5000'
+  : 'https://one-more-page.web.app';
 
 // CREATE EXPRESS SERVER INSTANCE
 const app = express();
@@ -16,6 +24,9 @@ const app = express();
 const corsOptions = {
   // eslint-disable-next-line object-shorthand
   origin: function (origin, callback) {
+    console.log('Origin:', origin);
+    console.log('Frontend URL:', frontendURL);
+
     if (frontendURL === origin || !origin) {
       callback(null, true);
     } else {

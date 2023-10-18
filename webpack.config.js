@@ -1,17 +1,23 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack'); // eslint-disable-line
 
+// Determine the current environment (default to development)
+const currentEnv = process.env.NODE_ENV || 'development';
+
 module.exports = {
-  mode: 'development', // as opposed to `production` which obfuscates namespaces
+  mode: currentEnv,
   entry: path.join(__dirname, '/client/source/index.jsx'),
   output: {
     path: path.join(__dirname, '/client/dist'),
     filename: 'bundle.js',
   },
   plugins: [
-    new Dotenv(),
+    new Dotenv({
+      // Load .env.development or .env.production based on the environment
+      path: path.resolve(__dirname, `.env.${currentEnv}`),
+    }),
   ],
-  devtool: 'source-map', // creates a file to relate compiled code to source code for debugging use
+  devtool: currentEnv === 'development' ? 'source-map' : false, // creates a file to relate compiled code to source code for debugging use
   module: {
     rules: [
       {

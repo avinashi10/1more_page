@@ -5,7 +5,7 @@ import { Grid } from '@chakra-ui/react';
 // LOCAL IMPORTS
 import ResultCard from './ResultCard.jsx';
 
-function ResultList({ booklist }) {
+function ResultList({ booklist, isAdmin }) {
   return (
     <Grid
       gridTemplateColumns="repeat(5, minmax(10rem, 1fr))"
@@ -30,7 +30,7 @@ function ResultList({ booklist }) {
         },
       }}
     >
-      {booklist.map((book) => <ResultCard key={book.isbn13} book={book} />)}
+      {booklist.map((book) => <ResultCard key={book.isbn13} book={book} isAdmin={isAdmin} />)}
     </Grid>
   );
 }
