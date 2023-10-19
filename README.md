@@ -1,6 +1,10 @@
 <div align="center">
   <h1>One More Page</h1>
   <p>A children's book search and filter website featuring diverse titles</p>
+  <h3>
+    🚀 Deployed Version: 
+    <a href="https://one-more-page.web.app/" target="_blank">One More Page Live</a>
+  </h3>
 </div>
 
 ## Tech Stack
