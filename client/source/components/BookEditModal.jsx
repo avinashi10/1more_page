@@ -34,7 +34,9 @@ function BookEditModal({ isOpen, onClose, bookTitle }) {
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Edit info for {bookTitle}</ModalHeader>
+        <ModalHeader>
+          Edit info for {bookTitle}
+        </ModalHeader>
         <ModalCloseButton />
         <ModalBody pb={6}>
           <FormControl>
@@ -60,14 +62,17 @@ function BookEditModal({ isOpen, onClose, bookTitle }) {
 
           <FormControl mt={4}>
             <FormLabel>Racial Identity</FormLabel>
-            <RadioGroup onChange={setRacialIdentity} value={racialIdentity}>
-              <Stack direction="column">
-                <Radio value="Multiracial">Multiracial</Radio>
-                <Radio value="South Asian">South Asian</Radio>
-                <Radio value="Native American">Native American</Radio>
-                {/* Add more Radio options as needed */}
-              </Stack>
-            </RadioGroup>
+            <Select placeholder="Select racial identity" onChange={(e) => setRacialIdentity(e.target.value)} value={racialIdentity}>
+              <option value="multiracial">Multiracial</option>
+              <option value="south asian">South Asian</option>
+              <option value="native american">Native American</option>
+              <option value="black">Black</option>
+              <option value="middle eastern">Middle Eastern</option>
+              <option value="native hawaiian/pacific islander">Native Hawaiian/Pacific Islander</option>
+              <option value="southeast asian">Southeast Asian</option>
+              <option value="east asian">East Asian</option>
+              <option value="latinx">Latinx</option>
+            </Select>
           </FormControl>
         </ModalBody>
 

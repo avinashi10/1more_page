@@ -21,10 +21,15 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true); // State to keep track of loading status
 
   const auth = getAuth(app);
-  // if (window.location.hostname === '127.0.0.1') {
-  //   connectAuthEmulator(auth, 'http://127.0.0.1:9099');
-  //   console.log('Connected to Auth Emulator:', auth.emulatorConfig);
-  // }
+  /*
+  This emulator authenticator which uses emulated
+  users vs real authentication credentials is
+  throwing errors
+  if (window.location.hostname === '127.0.0.1') {
+    connectAuthEmulator(auth, 'http://127.0.0.1:9099');
+    console.log('Connected to Auth Emulator:', auth.emulatorConfig);
+  }
+  */
   function login(email, password) {
     return signInWithEmailAndPassword(auth, email, password);
   }
