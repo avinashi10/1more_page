@@ -9,6 +9,7 @@ import { EditIcon, SearchIcon } from '@chakra-ui/icons';
 import logo from '../../dist/images/OMPLogo.png';
 import headshot from '../../dist/images/headshot.png';
 import AdminLoginModal from './AdminLoginModal.jsx';
+import { useAuth } from '../authContext.jsx';
 
 function SearchBar({ setUserInput }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -16,6 +17,7 @@ function SearchBar({ setUserInput }) {
 
   // SET STATES
   const [currentInput, setCurrentInput] = useState('');
+  const { currentUser, logout } = useAuth();
 
   // HANDLE EVENTS
   const handleChange = (e) => setCurrentInput(e.target.value);
@@ -23,6 +25,13 @@ function SearchBar({ setUserInput }) {
     e.preventDefault();
     setUserInput(currentInput);
     setCurrentInput('');
+  };
+  const handleLogout = async () => {
+    try {
+      await logout();
+    } catch (error) {
+      console.error('Failed to log out:', error);
+    }
   };
 
   return (
@@ -74,15 +83,25 @@ function SearchBar({ setUserInput }) {
         </ModalContent>
       </Modal>
 
-      <IconButton
-        color="brand.forest_green"
-        variant="outline"
-        aria-label="Search for book by title"
-        type="submit"
-        onClick={onAdminModalOpen}
-        flexShrink={0}
-        icon={<EditIcon />}
-      />
+      {currentUser ? (
+        <Button
+          color="brand.forest_green"
+          variant="outline"
+          onClick={handleLogout}
+          flexShrink={0}
+        >
+          Logout
+        </Button>
+      ) : (
+        <IconButton
+          color="brand.forest_green"
+          variant="outline"
+          aria-label="site administrator login"
+          onClick={onAdminModalOpen}
+          flexShrink={0}
+          icon={<EditIcon />}
+        />
+      )}
 
       <AdminLoginModal
         isOpen={isAdminModalOpen}

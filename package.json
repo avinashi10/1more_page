@@ -16,7 +16,7 @@
   "scripts": {
     "lint": "eslint .",
     "webpack-build": "webpack --watch",
-    "emulate-fullstack": "firebase emulators:start --only functions,hosting",
+    "emulate-fullstack": "firebase emulators:start --only functions,hosting,auth",
     "server-dev": "npx nodemon --watch functions functions/index.js",
     "test": "test",
     "install:functions": "cd functions && npm install && cd ..",

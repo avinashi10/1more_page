@@ -13,7 +13,7 @@ const isEmulator = functions.config().env && functions.config().env?.dev === 'tr
 
 // Conditionally set frontendURL based on the environment
 const frontendURL = isEmulator
-  ? 'http://localhost:5000'
+  ? 'http://127.0.0.1:5000'
   : 'https://one-more-page.web.app';
 
 // CREATE EXPRESS SERVER INSTANCE

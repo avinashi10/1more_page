@@ -10,30 +10,50 @@ import {
   FormControl,
   Input,
   Button,
+  Text,
 } from '@chakra-ui/react';
 
 // LOCAL IMPORTS
 import { useAuth } from '../authContext.jsx';
 
 function AdminLoginModal({ isOpen, onClose }) {
-  const { currentUser, login, logout } = useAuth();
+  const { login } = useAuth();
+  const [errorMessage, setErrorMessage] = useState('');
   const [adminInput, setAdminInput] = useState({ email: '', password: '' });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleAdminInputChange = (e) => {
     const { name, value } = e.target;
     setAdminInput(prev => ({ ...prev, [name]: value }));
+    setErrorMessage('');
   };
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setErrorMessage('');
+    if (!adminInput.email || !adminInput.password) {
+      setErrorMessage('Please enter both email and password');
+      return;
+    }
+    setIsLoading(true);
     try {
       await login(adminInput.email, adminInput.password);
-      onClose(); // Close the modal on successful login
+      onClose();
     } catch (error) {
-      // Handle errors here, such as displaying a message to the user
-      console.error('Failed to log in:', error);
+      if (error.code === 'auth/user-not-found') {
+        setErrorMessage('No user found with this email.');
+      } else if (error.code === 'auth/wrong-password') {
+        setErrorMessage('Incorrect password.');
+      } else if (error.code === 'auth/invalid-email') {
+        setErrorMessage('Invalid email format.');
+      } else {
+        // Generic error message for other types of errors
+        setErrorMessage('Failed to log in. Please try again.');
+      }
+      console.error('Login error:', error.code);
     }
-    setAdminInput({ email: '', password: '' }); // Reset the input fields
+    setIsLoading(false);
+    setAdminInput({ email: '', password: '' });
   };
 
   return (
@@ -45,6 +65,7 @@ function AdminLoginModal({ isOpen, onClose }) {
         <ModalBody>
           <FormControl as="form" onSubmit={handleLogin}>
             <Input
+              id="email-input"
               name="email"
               value={adminInput.email}
               onChange={handleAdminInputChange}
@@ -53,13 +74,19 @@ function AdminLoginModal({ isOpen, onClose }) {
               mb={3}
             />
             <Input
+              id="password-input"
               name="password"
               value={adminInput.password}
               onChange={handleAdminInputChange}
               placeholder="Enter password"
               type="password"
             />
-            <Button type="submit" mt={3}>
+            {errorMessage && (
+              <Text color="red.500" fontSize="sm" mt={2}>
+                {errorMessage}
+              </Text>
+            )}
+            <Button type="submit" mt={3} isLoading={isLoading}>
               Login
             </Button>
           </FormControl>

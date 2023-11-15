@@ -53,10 +53,11 @@ function App() {
   Although 127.0.0.1 and localhost usually point to the
   same local loopback address,they are treated as different
   origins by CORS policy. Therefore for frontend requests
-  to work in development, they must come from the same exact
-  url as listed below on line 59 (e.g. localhost not 127.0.0.1)
+  to work in development, they url listed below on line 59
+  (e.g. 127.0.0.1 not localhost) must exactly match the url
+  on line 16 of index.js
    */
-  const API_ENDPOINT = isEmulator ? 'http://localhost:5001/one-more-page/us-central1/api/books' : 'https://us-central1-one-more-page.cloudfunctions.net/api/books';
+  const API_ENDPOINT = isEmulator ? 'http://127.0.0.1:5001/one-more-page/us-central1/api/books' : 'https://us-central1-one-more-page.cloudfunctions.net/api/books';
   // console.log('API Endpoint:', API_ENDPOINT);
 
   // HOOKS

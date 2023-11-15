@@ -107,4 +107,10 @@ export const raceList = [
     checked: false,
     label: 'East Asian',
   },
+  {
+    id: 9,
+    value: 'latinx',
+    checked: false,
+    label: 'Latinx',
+  },
 ];

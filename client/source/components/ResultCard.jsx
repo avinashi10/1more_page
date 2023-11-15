@@ -1,18 +1,21 @@
 // LIBRARY IMPORTS
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import {
-  Box, Center, GridItem, Heading, Image, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, Text, useDisclosure,
+  Box, Center, GridItem, Heading, Image, Text, useDisclosure,
 } from '@chakra-ui/react';
 import { EditIcon } from '@chakra-ui/icons';
+import axios from 'axios';
 
 // LOCAL IMPORTS
+import { useAuth } from '../authContext.jsx';
+import BookEditModal from './BookEditModal.jsx';
 
-function ResultCard({ book, isAdmin, API_ENDPOINT }) {
+function ResultCard({ book, API_ENDPOINT }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   // SET STATE
   const [googleBook, setGoogleBook] = useState(null);
+  const { currentUser, logout } = useAuth();
 
   // HOOKS
   useEffect(() => {
@@ -27,16 +30,17 @@ function ResultCard({ book, isAdmin, API_ENDPOINT }) {
 
   return (
     <Box position="relative">
-      {isAdmin && (
+      {currentUser && (
         <EditIcon
           position="absolute"
           top={2}
           right={2}
           cursor="pointer"
           color="brand.sage_green"
-          // onClick={/* Function to handle edit goes here */}
+          onClick={onOpen}
         />
       )}
+      <BookEditModal isOpen={isOpen} onClose={onClose} bookTitle={book.title} />
       <GridItem
         display="grid"
         maxW={{
