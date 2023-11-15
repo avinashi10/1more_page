@@ -1,28 +1,10 @@
 // LIBRARY IMPORTS
 import React, { useState, useEffect } from 'react';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import firebase from 'firebase/app';
-import 'firebase/auth';
 
 // LOCAL IMPORTS
 import App from './App.jsx';
-import { AuthProvider } from '../authContext.js';
-
-const firebaseConfig = {
-  apiKey: 'AIzaSyC9i0im2LVCUAKbnaMEA4ZjhcHScAEyzOo',
-  authDomain: 'one-more-page.firebaseapp.com',
-  projectId: 'one-more-page',
-  storageBucket: 'one-more-page.appspot.com',
-  messagingSenderId: '507718610679',
-  appId: '1:507718610679:web:12c103d6ff69f664806df2',
-};
-
-// Initialize Firebase (if it hasn't been initialized yet)
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-} else {
-  firebase.app();
-}
+import { AuthProvider } from '../authContext.jsx';
 
 const theme = extendTheme({
   components: {

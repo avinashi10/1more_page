@@ -13,7 +13,6 @@ import { formatList, ageList, raceList } from './FilterFeatures/filterValues.js'
 function App() {
   // SET STATES
   const [booklist, setBooklist] = useState([]);
-  const [isAdmin, setIsAdmin] = useState([true]);
   const [userInput, setUserInput] = useState('');
   const [formats, setFormats] = useState(formatList);
   const [ages, setAges] = useState(ageList);
@@ -48,8 +47,17 @@ function App() {
 
   // Determine if running in emulator environment
   const isEmulator = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  // console.log('isEmulator frontend:', isEmulator);
 
+  /* ***DEVELOPMENT NOTE:***
+  Although 127.0.0.1 and localhost usually point to the
+  same local loopback address,they are treated as different
+  origins by CORS policy. Therefore for frontend requests
+  to work in development, they must come from the same exact
+  url as listed below on line 59 (e.g. localhost not 127.0.0.1)
+   */
   const API_ENDPOINT = isEmulator ? 'http://localhost:5001/one-more-page/us-central1/api/books' : 'https://us-central1-one-more-page.cloudfunctions.net/api/books';
+  // console.log('API Endpoint:', API_ENDPOINT);
 
   // HOOKS
   useEffect(() => {
@@ -102,7 +110,9 @@ function App() {
 
   return (
     <Flex flexDir="column" h="100vh">
-      <SearchBar setUserInput={setUserInput} isAdmin={isAdmin} setIsAdmin={setIsAdmin} />
+      <SearchBar
+        setUserInput={setUserInput}
+      />
       <Flex flex="1" h="100vh" w="100vw">
         <FilterPanel
           handleFormatChecked={handleFormatChecked}
@@ -111,7 +121,6 @@ function App() {
         />
         <ResultList
           booklist={booklist}
-          isAdmin={isAdmin}
           API_ENDPOINT={API_ENDPOINT}
         />
       </Flex>

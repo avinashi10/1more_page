@@ -8,6 +8,7 @@ import { EditIcon, SearchIcon } from '@chakra-ui/icons';
 // LOCAL IMPORTS
 import logo from '../../dist/images/OMPLogo.png';
 import headshot from '../../dist/images/headshot.png';
+import AdminLoginModal from './AdminLoginModal.jsx';
 
 function SearchBar({ setUserInput }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -15,7 +16,6 @@ function SearchBar({ setUserInput }) {
 
   // SET STATES
   const [currentInput, setCurrentInput] = useState('');
-  const [adminInput, setAdminInput] = useState('');
 
   // HANDLE EVENTS
   const handleChange = (e) => setCurrentInput(e.target.value);
@@ -23,15 +23,6 @@ function SearchBar({ setUserInput }) {
     e.preventDefault();
     setUserInput(currentInput);
     setCurrentInput('');
-  };
-  const handleAdminInputChange = (e) => setAdminInput(e.target.value);
-  const handleAdminSubmit = (e) => {
-    e.preventDefault();
-    if (adminInput === 'ADMIN_PASSWORD') {
-      setIsAdmin(true);
-    }
-    setAdminInput('');
-    onAdminModalClose();
   };
 
   return (
@@ -93,26 +84,10 @@ function SearchBar({ setUserInput }) {
         icon={<EditIcon />}
       />
 
-      <Modal isOpen={isAdminModalOpen} onClose={onAdminModalClose}>
-        <ModalOverlay />
-        <ModalContent bg="brand.light">
-          <ModalHeader>Admin Login</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <FormControl onSubmit={handleAdminSubmit}>
-              <Input
-                value={adminInput}
-                onChange={handleAdminInputChange}
-                placeholder="Enter Admin Key"
-                type="password"
-              />
-              <Button type="submit" mt={3}>
-                Login
-              </Button>
-            </FormControl>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
+      <AdminLoginModal
+        isOpen={isAdminModalOpen}
+        onClose={onAdminModalClose}
+      />
     </Flex>
   );
 }
