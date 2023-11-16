@@ -10,6 +10,6 @@ const controller = require('./controllers.js');
 router.get('/books/getGoogleBook/:id', controller.getGoogleBook);
 router.get('/books', controller.getAll);
 router.get('/books/:isbn', controller.getOne);
-router.put('/books/:isbn', controller.update);
+router.put('/books/:id', controller.update);
 
 module.exports = router;

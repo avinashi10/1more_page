@@ -17,6 +17,12 @@ export const formatList = [
     checked: false,
     label: 'graphic novel',
   },
+  {
+    id: 4,
+    value: 'early chapter book',
+    checked: false,
+    label: 'early chapter book',
+  },
 ];
 
 export const ageList = [

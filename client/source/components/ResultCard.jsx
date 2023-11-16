@@ -1,7 +1,7 @@
 // LIBRARY IMPORTS
 import React, { useState, useEffect } from 'react';
 import {
-  Box, Center, GridItem, Heading, Image, Text, useDisclosure,
+  Alert, AlertIcon, Box, Center, GridItem, Heading, Image, Text, useDisclosure,
 } from '@chakra-ui/react';
 import { EditIcon } from '@chakra-ui/icons';
 import axios from 'axios';
@@ -15,7 +15,16 @@ function ResultCard({ book, API_ENDPOINT }) {
 
   // SET STATE
   const [googleBook, setGoogleBook] = useState(null);
-  const { currentUser, logout } = useAuth();
+  const { currentUser } = useAuth();
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+
+  // EVENT HANDLERS
+  const handleEditSuccess = (message) => {
+    setSuccessMessage(message);
+    setShowSuccessAlert(true);
+    setTimeout(() => setShowSuccessAlert(false), 6000); // Hide alert after 6 seconds
+  };
 
   // HOOKS
   useEffect(() => {
@@ -40,7 +49,23 @@ function ResultCard({ book, API_ENDPOINT }) {
           onClick={onOpen}
         />
       )}
-      <BookEditModal isOpen={isOpen} onClose={onClose} bookTitle={book.title} />
+      {showSuccessAlert && (
+        <Alert status="success">
+          <AlertIcon />
+          {successMessage}
+        </Alert>
+      )}
+      <BookEditModal
+        isOpen={isOpen}
+        onClose={onClose}
+        bookTitle={book.title}
+        currentFormat={book?.format}
+        currentAgeRange={book?.age_range}
+        currentRacialIdentity={book?.racial_identity}
+        bookId={book.id}
+        API_ENDPOINT={API_ENDPOINT}
+        onEditSuccess={handleEditSuccess}
+      />
       <GridItem
         display="grid"
         maxW={{

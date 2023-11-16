@@ -12,22 +12,48 @@ import {
   FormControl,
   FormLabel,
   Select,
-  RadioGroup,
-  Radio,
-  Stack,
+  Text,
 } from '@chakra-ui/react';
 import axios from 'axios';
 
-function BookEditModal({ isOpen, onClose, bookTitle }) {
-  const [format, setFormat] = useState('');
-  const [age, setAge] = useState('');
-  const [racialIdentity, setRacialIdentity] = useState('');
+function BookEditModal({
+  isOpen,
+  onClose,
+  bookTitle,
+  currentFormat,
+  currentAgeRange,
+  currentRacialIdentity,
+  bookId,
+  API_ENDPOINT,
+  onEditSuccess,
+}) {
+  const [format, setFormat] = useState(currentFormat || '');
+  const [age, setAge] = useState(currentAgeRange || '');
+  const [racialIdentity, setRacialIdentity] = useState(currentRacialIdentity || '');
 
-  const isFormFilled = format || age || racialIdentity;
+  const isDataChanged = format !== currentFormat || age !== currentAgeRange || racialIdentity !== currentRacialIdentity;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Add logic to submit the form data
+
+    let updateData = {};
+    if (format !== currentFormat) updateData.format = format;
+    if (age !== currentAgeRange) updateData.ageRange = age;
+    if (racialIdentity !== currentRacialIdentity) updateData.raceRep = racialIdentity;
+
+    // Check if any field has been updated
+    if (Object.keys(updateData).length === 0) {
+      console.log('No changes made.');
+      return;
+    }
+
+    try {
+      await axios.put(`${API_ENDPOINT}/${bookId}`, updateData);
+      onEditSuccess(`Successfully updated info for ${bookTitle}`);
+      onClose();
+    } catch (error) {
+      console.error('Failed to update book:', error);
+    }
   };
 
   return (
@@ -41,6 +67,9 @@ function BookEditModal({ isOpen, onClose, bookTitle }) {
         <ModalBody pb={6}>
           <FormControl>
             <FormLabel>Format</FormLabel>
+            <Text>
+              Current Format: {currentFormat || 'Not set'}
+            </Text>
             <Select placeholder="Select format" onChange={(e) => setFormat(e.target.value)} value={format}>
               <option value="board book">Board Book</option>
               <option value="picture book">Picture Book</option>
@@ -50,6 +79,9 @@ function BookEditModal({ isOpen, onClose, bookTitle }) {
 
           <FormControl mt={4}>
             <FormLabel>Ages</FormLabel>
+            <Text>
+              Current Age Range: {currentAgeRange || 'Not set'}
+            </Text>
             <Select placeholder="Select age group" onChange={(e) => setAge(e.target.value)} value={age}>
               <option value="0-2">0-2</option>
               <option value="2-4">2-4</option>
@@ -62,6 +94,9 @@ function BookEditModal({ isOpen, onClose, bookTitle }) {
 
           <FormControl mt={4}>
             <FormLabel>Racial Identity</FormLabel>
+            <Text>
+              Current Racial Identity: {currentRacialIdentity || 'Not set'}
+            </Text>
             <Select placeholder="Select racial identity" onChange={(e) => setRacialIdentity(e.target.value)} value={racialIdentity}>
               <option value="multiracial">Multiracial</option>
               <option value="south asian">South Asian</option>
@@ -81,7 +116,7 @@ function BookEditModal({ isOpen, onClose, bookTitle }) {
             colorScheme="blue"
             mr={3}
             onClick={handleSubmit}
-            isDisabled={!isFormFilled}
+            isDisabled={!isDataChanged}
           >
             Save
           </Button>

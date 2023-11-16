@@ -53,7 +53,7 @@ function App() {
   Although 127.0.0.1 and localhost usually point to the
   same local loopback address,they are treated as different
   origins by CORS policy. Therefore for frontend requests
-  to work in development, they url listed below on line 59
+  to work in development, they url listed below on line 60
   (e.g. 127.0.0.1 not localhost) must exactly match the url
   on line 16 of index.js
    */
