@@ -62,7 +62,7 @@ function ResultCard({ book, API_ENDPOINT }) {
         currentFormat={book?.format}
         currentAgeRange={book?.age_range}
         currentRacialIdentity={book?.racial_identity}
-        bookId={book.id}
+        bookId={book._id}
         API_ENDPOINT={API_ENDPOINT}
         onEditSuccess={handleEditSuccess}
       />

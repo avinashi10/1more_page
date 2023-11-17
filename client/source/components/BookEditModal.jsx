@@ -73,6 +73,7 @@ function BookEditModal({
             <Select placeholder="Select format" onChange={(e) => setFormat(e.target.value)} value={format}>
               <option value="board book">Board Book</option>
               <option value="picture book">Picture Book</option>
+              <option value="graphic novel">Early Chapter Book</option>
               <option value="graphic novel">Graphic Novel</option>
             </Select>
           </FormControl>
