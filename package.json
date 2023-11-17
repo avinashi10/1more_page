@@ -16,7 +16,7 @@
   "scripts": {
     "lint": "eslint .",
     "webpack-build": "webpack --watch",
-    "emulate-fullstack": "firebase emulators:start --only functions,hosting",
+    "emulate-fullstack": "firebase emulators:start --only functions,hosting,auth",
     "server-dev": "npx nodemon --watch functions functions/index.js",
     "test": "test",
     "install:functions": "cd functions && npm install && cd ..",
@@ -30,6 +30,7 @@
     "@emotion/styled": "^11.10.6",
     "axios": "^1.3.4",
     "dotenv": "^16.0.3",
+    "firebase": "^10.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

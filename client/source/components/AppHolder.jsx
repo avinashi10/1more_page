@@ -4,6 +4,7 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 
 // LOCAL IMPORTS
 import App from './App.jsx';
+import { AuthProvider } from '../authContext.jsx';
 
 const theme = extendTheme({
   components: {
@@ -37,7 +38,9 @@ const theme = extendTheme({
 function AppHolder() {
   return (
     <ChakraProvider theme={theme}>
-      <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </ChakraProvider>
   );
 }

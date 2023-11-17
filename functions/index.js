@@ -8,12 +8,12 @@ const cors = require('cors');
 const router = require('./routes.js');
 
 // Check if running in Firebase Emulator
-const isEmulator = functions.config().env && functions.config().env.dev === 'true';
+const isEmulator = functions.config().env && functions.config().env?.dev === 'true';
 // console.log('isEmulator backend:', isEmulator);
 
 // Conditionally set frontendURL based on the environment
 const frontendURL = isEmulator
-  ? 'http://localhost:5000'
+  ? 'http://127.0.0.1:5000'
   : 'https://one-more-page.web.app';
 
 // CREATE EXPRESS SERVER INSTANCE

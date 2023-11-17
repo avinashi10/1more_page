@@ -25,7 +25,7 @@ module.exports = {
       .catch((err) => res.status(404).send(err));
   },
   update: (req, res) => {
-    model.updateInDb(req.params.isbn, req.body.ageRange, req.body.raceRep, req.body.format)
+    model.updateInDb(req.params.id, req.body.ageRange, req.body.raceRep, req.body.format)
       .then((data) => {
         res.send(data);
       })

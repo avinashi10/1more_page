@@ -17,6 +17,12 @@ export const formatList = [
     checked: false,
     label: 'graphic novel',
   },
+  {
+    id: 4,
+    value: 'early chapter book',
+    checked: false,
+    label: 'early chapter book',
+  },
 ];
 
 export const ageList = [
@@ -106,5 +112,11 @@ export const raceList = [
     value: 'east asian',
     checked: false,
     label: 'East Asian',
+  },
+  {
+    id: 9,
+    value: 'latinx',
+    checked: false,
+    label: 'Latinx',
   },
 ];
